@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminArticleController;
+use App\Http\Controllers\Admin\AdminProjectController;
+use App\Http\Controllers\Admin\AdminServiceController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\NewsletterController;
@@ -30,14 +34,38 @@ Route::get('/blog/{article}', [BlogController::class, 'show'])->name('blog.show'
 // Newsletter subscription
 Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Admin dashboard routes
+Route::middleware(['auth', 'verified'])->prefix('dashboard')->name('admin.')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
+    // Projects management
+    Route::resource('projects', AdminProjectController::class)->except(['show']);
+    Route::post('projects/{project}/toggle-publish', [AdminProjectController::class, 'togglePublish'])->name('projects.toggle-publish');
+
+    // Services management
+    Route::resource('services', AdminServiceController::class)->except(['show']);
+    Route::post('services/{service}/toggle-publish', [AdminServiceController::class, 'togglePublish'])->name('services.toggle-publish');
+    Route::post('services/reorder', [AdminServiceController::class, 'reorder'])->name('services.reorder');
+
+    // Articles management
+    Route::resource('articles', AdminArticleController::class)->except(['show']);
+    Route::post('articles/{article}/toggle-publish', [AdminArticleController::class, 'togglePublish'])->name('articles.toggle-publish');
+
+    // Profile management
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::get('/dashboard', function () {
+    return redirect()->route('admin.dashboard');
+})->middleware(['auth', 'verified']);
+
+Route::middleware('auth')->group(function () {
+    // Legacy profile routes (kept for compatibility)
+    Route::get('/profile', function () {
+        return redirect()->route('admin.profile.edit');
+    });
 });
 
 require __DIR__.'/auth.php';
