@@ -44,10 +44,6 @@
 <div class="bg-gray-50 dark:bg-gray-800 py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 stagger-parent">
-            @php
-                $services = \App\Models\Service::published()->get();
-            @endphp
-
             @forelse($services as $service)
             <a href="{{ route('services.show', $service) }}" class="group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
                 <!-- Gradient border effect -->

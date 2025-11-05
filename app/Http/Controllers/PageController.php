@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\View\View;
 
 class PageController extends Controller
@@ -57,7 +58,8 @@ class PageController extends Controller
      */
     public function services(): View
     {
-        return view('pages.services');
+        $services = Service::published()->get();
+        return view('pages.services', compact('services'));
     }
 
     /**
