@@ -7,11 +7,11 @@
 <div class="bg-gradient-to-b from-gray-900 via-gray-900 to-white dark:to-gray-900 relative isolate overflow-hidden">
     <!-- Decorative Background Elements -->
     <div aria-hidden="true" class="absolute inset-0 -z-10">
-        <div class="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-sky-500/10 via-transparent to-transparent"></div>
+        <div class="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-sky-500/10 via-transparent to-transparent parallax-slow" data-speed="0.3"></div>
         <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-             class="absolute left-[calc(50%-15rem)] top-0 aspect-[1155/678] w-[50rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-sky-400 to-cyan-400 opacity-20 blur-3xl sm:left-[calc(50%-30rem)] sm:w-[72rem]"></div>
+             class="absolute left-[calc(50%-15rem)] top-0 aspect-[1155/678] w-[50rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-sky-400 to-cyan-400 opacity-20 blur-3xl sm:left-[calc(50%-30rem)] sm:w-[72rem] parallax-fast float-animation" data-speed="0.5"></div>
         <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-             class="absolute right-[calc(50%-15rem)] top-20 aspect-[1155/678] w-[40rem] translate-x-1/2 rotate-[-30deg] bg-gradient-to-tr from-cyan-400 to-sky-400 opacity-15 blur-3xl sm:right-[calc(50%-20rem)] sm:w-[60rem]"></div>
+             class="absolute right-[calc(50%-15rem)] top-20 aspect-[1155/678] w-[40rem] translate-x-1/2 rotate-[-30deg] bg-gradient-to-tr from-cyan-400 to-sky-400 opacity-15 blur-3xl sm:right-[calc(50%-20rem)] sm:w-[60rem] parallax-fast float-animation" data-speed="0.6"></div>
     </div>
 
     <div class="relative px-6 pt-8 lg:px-8" x-data="{
@@ -53,8 +53,8 @@
     }">
         <div class="mx-auto max-w-2xl py-12 sm:py-16 lg:py-24">
             <!-- Badge animé -->
-            <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-                <div class="relative rounded-full px-4 py-1.5 text-sm leading-6 text-gray-300 ring-1 ring-white/10 hover:ring-white/20 backdrop-blur-sm transition-all duration-300 bg-white/5">
+            <div class="hidden sm:mb-8 sm:flex sm:justify-center animate-on-scroll">
+                <div class="relative rounded-full px-4 py-1.5 text-sm leading-6 text-gray-300 ring-1 ring-white/10 hover:ring-white/20 backdrop-blur-sm transition-all duration-300 bg-white/5 pulse-glow shimmer">
                     <span x-text="slides[currentSlide].badge"></span>
                     <a href="{{ route('projects') }}" class="font-semibold text-sky-400 ml-1 hover:text-sky-300 transition-colors">
                         <span aria-hidden="true" class="absolute inset-0"></span>
@@ -147,9 +147,9 @@
                 De la conception au déploiement, nous vous accompagnons à chaque étape de votre transformation digitale avec expertise et innovation.
             </p>
         </div>
-        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none stagger-parent">
             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-                <div class="flex flex-col group">
+                <div class="flex flex-col group stagger-child card-3d animate-on-scroll opacity-0 translate-x-10 transition-all duration-700">
                     <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
                         <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-cyan-500 group-hover:scale-110 transition-transform duration-300">
                             <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
@@ -162,7 +162,7 @@
                         <p class="flex-auto">Applications web modernes et performantes avec les dernières technologies. Sites vitrines, e-commerce, plateformes sur mesure.</p>
                     </dd>
                 </div>
-                <div class="flex flex-col group">
+                <div class="flex flex-col group stagger-child card-3d animate-on-scroll opacity-0 translate-x-10 transition-all duration-700">
                     <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
                         <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-cyan-500 group-hover:scale-110 transition-transform duration-300">
                             <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
@@ -176,7 +176,7 @@
                         <p class="flex-auto">Applications iOS et Android natives ou cross-platform pour atteindre votre audience sur tous les appareils.</p>
                     </dd>
                 </div>
-                <div class="flex flex-col group">
+                <div class="flex flex-col group stagger-child card-3d animate-on-scroll opacity-0 translate-x-10 transition-all duration-700">
                     <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
                         <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-cyan-500 group-hover:scale-110 transition-transform duration-300">
                             <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
@@ -208,28 +208,28 @@
                 </p>
             </div>
             <dl class="mt-16 grid grid-cols-1 gap-6 overflow-hidden text-center sm:grid-cols-2 lg:grid-cols-4">
-                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group">
+                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
                     <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Projets réalisés</dt>
                     <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">
-                        <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">50+</span>
+                        <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent" data-count="50">0</span>+
                     </dd>
                 </div>
-                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group">
+                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
                     <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Clients satisfaits</dt>
                     <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">
-                        <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">100%</span>
+                        <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent" data-count="100">0</span>%
                     </dd>
                 </div>
-                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group">
+                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
                     <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Années d'expérience</dt>
                     <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">
-                        <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">5+</span>
+                        <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent" data-count="5">0</span>+
                     </dd>
                 </div>
-                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group">
+                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
                     <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Technologies maîtrisées</dt>
                     <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">
-                        <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">20+</span>
+                        <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent" data-count="20">0</span>+
                     </dd>
                 </div>
             </dl>
@@ -254,9 +254,9 @@
                 Une méthodologie éprouvée pour garantir le succès de votre projet
             </p>
         </div>
-        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none stagger-parent">
             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
-                <div class="flex flex-col items-start group">
+                <div class="flex flex-col items-start group stagger-child animate-on-scroll opacity-0 translate-x-10 transition-all duration-700">
                     <div class="relative">
                         <div class="rounded-xl bg-gradient-to-br from-sky-500 to-cyan-500 p-4 ring-1 ring-white/10 shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
                             <span class="text-2xl font-bold text-white">1</span>
@@ -270,7 +270,7 @@
                     <dt class="mt-6 font-semibold text-gray-900 dark:text-white text-lg">Analyse</dt>
                     <dd class="mt-2 leading-7 text-gray-600 dark:text-gray-400">Compréhension approfondie de vos besoins et objectifs business.</dd>
                 </div>
-                <div class="flex flex-col items-start group">
+                <div class="flex flex-col items-start group stagger-child animate-on-scroll opacity-0 translate-x-10 transition-all duration-700">
                     <div class="relative">
                         <div class="rounded-xl bg-gradient-to-br from-sky-500 to-cyan-500 p-4 ring-1 ring-white/10 shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
                             <span class="text-2xl font-bold text-white">2</span>
@@ -284,7 +284,7 @@
                     <dt class="mt-6 font-semibold text-gray-900 dark:text-white text-lg">Conception</dt>
                     <dd class="mt-2 leading-7 text-gray-600 dark:text-gray-400">Design UX/UI et architecture technique adaptés à votre projet.</dd>
                 </div>
-                <div class="flex flex-col items-start group">
+                <div class="flex flex-col items-start group stagger-child animate-on-scroll opacity-0 translate-x-10 transition-all duration-700">
                     <div class="relative">
                         <div class="rounded-xl bg-gradient-to-br from-sky-500 to-cyan-500 p-4 ring-1 ring-white/10 shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
                             <span class="text-2xl font-bold text-white">3</span>
@@ -320,9 +320,9 @@
                 Ce que disent nos clients
             </p>
         </div>
-        <div class="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+        <div class="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none stagger-parent">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                <div class="rounded-2xl bg-white/5 backdrop-blur-sm p-8 ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group">
+                <div class="rounded-2xl bg-white/5 backdrop-blur-sm p-8 ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group stagger-child card-3d animate-on-scroll opacity-0 translate-y-10 hover:scale-105">
                     <figure class="flex flex-col justify-between h-full">
                         <div>
                             <div class="flex gap-1 mb-4">

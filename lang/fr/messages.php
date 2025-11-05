@@ -134,4 +134,13 @@ return [
         'error' => 'Une erreur est survenue',
         'success' => 'Succès',
     ],
+
+    // Cookies
+    'cookies' => [
+        'title' => 'Nous utilisons des cookies',
+        'description' => 'Nous utilisons des cookies pour améliorer votre expérience de navigation, analyser le trafic du site et personnaliser le contenu. En cliquant sur "Accepter", vous consentez à notre utilisation des cookies.',
+        'learn_more' => 'En savoir plus',
+        'accept' => 'Accepter',
+        'decline' => 'Refuser',
+    ],
 ];

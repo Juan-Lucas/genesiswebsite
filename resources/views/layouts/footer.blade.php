@@ -7,7 +7,7 @@
             <!-- Company Info -->
             <div class="col-span-1 md:col-span-2 lg:col-span-1">
                 <div class="flex items-center mb-4">
-                    <x-application-logo class="block h-20 w-auto" />
+                    <x-application-logo class="block h-28 w-auto" />
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-6">
                     Solutions innovantes pour votre transformation digitale.
