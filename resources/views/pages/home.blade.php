@@ -149,46 +149,21 @@
         </div>
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none stagger-parent">
             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                @foreach($services as $service)
                 <div class="flex flex-col group stagger-child card-3d animate-on-scroll opacity-0 translate-x-10 transition-all duration-700">
                     <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-cyan-500 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 002 4.25v11.5A2.25 2.25 0 004.25 18h11.5A2.25 2.25 0 0018 15.75V4.25A2.25 2.25 0 0015.75 2H4.25zm4.03 6.28a.75.75 0 00-1.06-1.06L4.97 9.47a.75.75 0 000 1.06l2.25 2.25a.75.75 0 001.06-1.06L6.56 10l1.72-1.72zm4.5-1.06a.75.75 0 10-1.06 1.06L13.44 10l-1.72 1.72a.75.75 0 101.06 1.06l2.25-2.25a.75.75 0 000-1.06l-2.25-2.25z" clip-rule="evenodd" />
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-{{ $service['color'] }}-500 to-{{ $service['color'] }}-600 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                {!! $service['icon'] !!}
                             </svg>
                         </div>
-                        Développement Web
+                        {{ $service['title'] }}
                     </dt>
                     <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
-                        <p class="flex-auto">Applications web modernes et performantes avec les dernières technologies. Sites vitrines, e-commerce, plateformes sur mesure.</p>
+                        <p class="flex-auto">{{ $service['description'] }}</p>
                     </dd>
                 </div>
-                <div class="flex flex-col group stagger-child card-3d animate-on-scroll opacity-0 translate-x-10 transition-all duration-700">
-                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-cyan-500 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M7 3.5A1.5 1.5 0 018.5 2h3.879a1.5 1.5 0 011.06.44l3.122 3.12A1.5 1.5 0 0117 6.622V12.5a1.5 1.5 0 01-1.5 1.5h-1v-3.379a3 3 0 00-.879-2.121L10.5 5.379A3 3 0 008.379 4.5H7v-1z" />
-                                <path d="M4.5 6A1.5 1.5 0 003 7.5v9A1.5 1.5 0 004.5 18h7a1.5 1.5 0 001.5-1.5v-5.879a1.5 1.5 0 00-.44-1.06L9.44 6.439A1.5 1.5 0 008.378 6H4.5z" />
-                            </svg>
-                        </div>
-                        Applications Mobile
-                    </dt>
-                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
-                        <p class="flex-auto">Applications iOS et Android natives ou cross-platform pour atteindre votre audience sur tous les appareils.</p>
-                    </dd>
-                </div>
-                <div class="flex flex-col group stagger-child card-3d animate-on-scroll opacity-0 translate-x-10 transition-all duration-700">
-                    <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-cyan-500 group-hover:scale-110 transition-transform duration-300">
-                            <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm4.75 6.75a.75.75 0 011.5 0v2.546l.943-1.048a.75.75 0 011.114 1.004l-2.25 2.5a.75.75 0 01-1.114 0l-2.25-2.5a.75.75 0 111.114-1.004l.943 1.048V8.75z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        Cloud Solutions
-                    </dt>
-                    <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
-                        <p class="flex-auto">Infrastructure cloud, hébergement, migration et optimisation pour une scalabilité et sécurité maximales.</p>
-                    </dd>
-                </div>
+                @endforeach
             </dl>
         </div>
     </div>
