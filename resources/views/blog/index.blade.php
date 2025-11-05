@@ -86,15 +86,28 @@
                                 <img src="{{ asset($article->image) }}" alt="{{ $article->title }}" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500">
                             </div>
                         @else
-                            <div class="relative aspect-[16/9] w-full bg-gradient-to-br from-sky-500 via-cyan-500 to-blue-600 overflow-hidden">
+                            <div class="relative aspect-[16/9] w-full bg-gradient-to-br from-sky-500 via-cyan-500 to-blue-600 overflow-hidden p-8">
                                 <div class="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-blue-600/20 group-hover:scale-110 transition-transform duration-500"></div>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-white/30 blur-2xl"></div>
-                                        <svg class="relative h-16 w-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                        </svg>
-                                    </div>
+                                <div class="relative h-full w-full flex items-center justify-center">
+                                    @php
+                                        $illustrationMap = [
+                                            'actualités' => 'article-news',
+                                            'actualites' => 'article-news',
+                                            'news' => 'article-news',
+                                            'technologie' => 'article-blog',
+                                            'technology' => 'article-blog',
+                                            'développement' => 'article-blog',
+                                            'développement web' => 'article-blog',
+                                            'web' => 'article-blog',
+                                            'mobile' => 'article-blog',
+                                            'design' => 'article-blog',
+                                            'marketing' => 'article-news',
+                                            'business' => 'article-news',
+                                        ];
+                                        $category = strtolower($article->category);
+                                        $illustration = $illustrationMap[$category] ?? 'article-blog';
+                                    @endphp
+                                    <x-dynamic-component :component="'illustrations.' . $illustration" class="w-full h-full object-contain drop-shadow-2xl opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                                 </div>
                             </div>
                         @endif
