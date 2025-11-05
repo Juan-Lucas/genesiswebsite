@@ -27,7 +27,7 @@
             <div class="text-center">
                 <!-- Illustration -->
                 <div class="flex justify-center mb-8 animate-on-scroll">
-                    <div class="w-32 h-32">
+                    <div class="w-48 max-w-full">
                         @php
                             $illustrationMap = [
                                 'photographie' => 'project-photo',
@@ -51,7 +51,7 @@
                             $category = strtolower($project->category);
                             $illustration = $illustrationMap[$category] ?? 'project-software';
                         @endphp
-                        <x-dynamic-component :component="'illustrations.' . $illustration" class="w-full h-full object-contain drop-shadow-2xl" />
+                        <x-dynamic-component :component="'illustrations.' . $illustration" class="w-full h-auto drop-shadow-2xl" />
                     </div>
                 </div>
 
@@ -334,9 +334,9 @@
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 stagger-parent">
             @foreach($relatedProjects as $related)
                 <a href="{{ route('projects.show', $related) }}" class="group flex flex-col rounded-2xl bg-white dark:bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300 ring-1 ring-gray-200 dark:ring-gray-700 hover:ring-genesis-blue-500/50 hover:-translate-y-1 overflow-hidden stagger-child card-3d animate-on-scroll">
-                    <div class="relative h-56 bg-gradient-to-br from-{{ $related->color }}-500 via-{{ $related->color }}-500 to-{{ $related->color }}-600 flex items-center justify-center overflow-hidden p-6">
+                    <div class="relative h-56 bg-gradient-to-br from-{{ $related->color }}-500 via-{{ $related->color }}-500 to-{{ $related->color }}-600 flex items-center justify-center overflow-hidden p-8">
                         <div class="absolute inset-0 bg-gradient-to-br from-{{ $related->color }}-500/20 to-{{ $related->color }}-600/20 group-hover:scale-110 transition-transform duration-300"></div>
-                        <div class="relative w-full h-full flex items-center justify-center">
+                        <div class="relative w-full max-w-[280px] mx-auto">
                             @php
                                 $illustrationMap = [
                                     'photographie' => 'project-photo',
@@ -360,7 +360,7 @@
                                 $category = strtolower($related->category);
                                 $illustration = $illustrationMap[$category] ?? 'project-software';
                             @endphp
-                            <x-dynamic-component :component="'illustrations.' . $illustration" class="w-full h-full object-contain drop-shadow-xl opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" />
+                            <x-dynamic-component :component="'illustrations.' . $illustration" class="w-full h-auto drop-shadow-xl opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" />
                         </div>
                     </div>
                     <div class="p-6">

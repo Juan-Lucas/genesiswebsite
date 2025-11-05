@@ -86,9 +86,9 @@
                                 <img src="{{ asset($article->image) }}" alt="{{ $article->title }}" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500">
                             </div>
                         @else
-                            <div class="relative aspect-[16/9] w-full bg-gradient-to-br from-sky-500 via-cyan-500 to-blue-600 overflow-hidden p-8">
+                            <div class="relative aspect-[16/9] w-full bg-gradient-to-br from-sky-500 via-cyan-500 to-blue-600 overflow-hidden flex items-center justify-center p-8">
                                 <div class="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-blue-600/20 group-hover:scale-110 transition-transform duration-500"></div>
-                                <div class="relative h-full w-full flex items-center justify-center">
+                                <div class="relative w-full max-w-[320px] mx-auto">
                                     @php
                                         $illustrationMap = [
                                             'actualités' => 'article-news',
@@ -107,7 +107,7 @@
                                         $category = strtolower($article->category);
                                         $illustration = $illustrationMap[$category] ?? 'article-blog';
                                     @endphp
-                                    <x-dynamic-component :component="'illustrations.' . $illustration" class="w-full h-full object-contain drop-shadow-2xl opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
+                                    <x-dynamic-component :component="'illustrations.' . $illustration" class="w-full h-auto drop-shadow-2xl opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                                 </div>
                             </div>
                         @endif

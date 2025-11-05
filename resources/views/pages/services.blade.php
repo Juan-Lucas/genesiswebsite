@@ -14,28 +14,28 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="text-center lg:text-left">
-            <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700 mb-8 pulse-glow shimmer animate-on-scroll">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-genesis-blue-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-genesis-blue-500"></span>
-                </span>
-                <span class="text-sm font-medium text-white dark:text-gray-200">Solutions digitales complètes</span>
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700 mb-8 pulse-glow shimmer animate-on-scroll">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-genesis-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-genesis-blue-500"></span>
+                    </span>
+                    <span class="text-sm font-medium text-white dark:text-gray-200">Solutions digitales complètes</span>
+                </div>
+
+                <!-- Title -->
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight animate-on-scroll">
+                    Nos <span class="bg-gradient-genesis bg-clip-text text-transparent">Services</span>
+                </h1>
+                <p class="mt-6 text-xl md:text-2xl text-gray-300 dark:text-gray-400 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
+                    Des solutions complètes pour transformer votre présence digitale
+                </p>
             </div>
 
-            <!-- Title -->
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight animate-on-scroll">
-                Nos <span class="bg-gradient-genesis bg-clip-text text-transparent">Services</span>
-            </h1>
-            <p class="mt-6 text-xl md:text-2xl text-gray-300 dark:text-gray-400 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
-                Des solutions complètes pour transformer votre présence digitale
-            </p>
-        </div>
-
-        <!-- Illustration -->
-        <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
-            <x-illustrations.creative-work class="w-full h-auto drop-shadow-2xl" />
-        </div>
+            <!-- Illustration -->
+            <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
+                <x-illustrations.creative-work class="w-full h-auto drop-shadow-2xl" />
+            </div>
         </div>
     </div>
 

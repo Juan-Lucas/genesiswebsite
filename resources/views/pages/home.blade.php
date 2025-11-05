@@ -55,86 +55,86 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Left: Content -->
                 <div>
-            <!-- Badge animé -->
-            <div class="mb-8 flex justify-center lg:justify-start animate-on-scroll">
-                <div class="relative rounded-full px-4 py-1.5 text-sm leading-6 text-gray-300 ring-1 ring-white/10 hover:ring-white/20 backdrop-blur-sm transition-all duration-300 bg-white/5 pulse-glow shimmer">
-                    <span x-text="slides[currentSlide].badge"></span>
-                    <a href="{{ route('projects') }}" class="font-semibold text-genesis-blue-500 ml-1 hover:text-genesis-blue-400 transition-colors">
-                        <span aria-hidden="true" class="absolute inset-0"></span>
-                        En savoir plus <span aria-hidden="true">→</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="text-center lg:text-left">
-                <!-- Slider Content -->
-                <div class="relative min-h-[350px] sm:min-h-[300px]">
-                    <template x-for="(slide, index) in slides" :key="index">
-                        <div x-show="currentSlide === index"
-                             x-transition:enter="transition ease-out duration-500"
-                             x-transition:enter-start="opacity-0 transform translate-x-8"
-                             x-transition:enter-end="opacity-100 transform translate-x-0"
-                             x-transition:leave="transition ease-in duration-500"
-                             x-transition:leave-start="opacity-100 transform translate-x-0"
-                             x-transition:leave-end="opacity-0 transform -translate-x-8"
-                             class="absolute inset-0">
-                            <h1 class="text-4xl font-bold tracking-tight text-balance text-white sm:text-6xl lg:text-7xl leading-tight"
-                                x-text="slide.title">
-                            </h1>
-                            <p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8 max-w-2xl mx-auto lg:mx-0"
-                               x-text="slide.description">
-                            </p>
+                    <!-- Badge animé -->
+                    <div class="mb-8 flex justify-center lg:justify-start animate-on-scroll">
+                        <div class="relative rounded-full px-4 py-1.5 text-sm leading-6 text-gray-300 ring-1 ring-white/10 hover:ring-white/20 backdrop-blur-sm transition-all duration-300 bg-white/5 pulse-glow shimmer">
+                            <span x-text="slides[currentSlide].badge"></span>
+                            <a href="{{ route('projects') }}" class="font-semibold text-genesis-blue-500 ml-1 hover:text-genesis-blue-400 transition-colors">
+                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                En savoir plus <span aria-hidden="true">→</span>
+                            </a>
                         </div>
-                    </template>
+                    </div>
+
+                    <div class="text-center lg:text-left">
+                        <!-- Slider Content -->
+                        <div class="relative min-h-[350px] sm:min-h-[300px]">
+                            <template x-for="(slide, index) in slides" :key="index">
+                                <div x-show="currentSlide === index"
+                                     x-transition:enter="transition ease-out duration-500"
+                                     x-transition:enter-start="opacity-0 transform translate-x-8"
+                                     x-transition:enter-end="opacity-100 transform translate-x-0"
+                                     x-transition:leave="transition ease-in duration-500"
+                                     x-transition:leave-start="opacity-100 transform translate-x-0"
+                                     x-transition:leave-end="opacity-0 transform -translate-x-8"
+                                     class="absolute inset-0">
+                                    <h1 class="text-4xl font-bold tracking-tight text-balance text-white sm:text-6xl lg:text-7xl leading-tight"
+                                        x-text="slide.title">
+                                    </h1>
+                                    <p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8 max-w-2xl mx-auto lg:mx-0"
+                                       x-text="slide.description">
+                                    </p>
+                                </div>
+                            </template>
+                        </div>
+
+                        <!-- Slider Controls -->
+                        <div class="mt-16 flex items-center justify-center lg:justify-start gap-x-6">
+                            <a href="{{ route('services') }}" class="rounded-lg bg-gradient-genesis px-6 py-3.5 text-base font-semibold text-white shadow-lg hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-genesis-blue-500 transition-all duration-300">
+                                Découvrir nos services
+                            </a>
+                            <a href="{{ route('contact') }}" class="text-base font-semibold text-white hover:text-gray-300 transition-colors duration-300 flex items-center gap-2">
+                                Nous contacter
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Slider Dots -->
+                        <div class="mt-12 flex justify-center lg:justify-start gap-2">
+                            <template x-for="(slide, index) in slides" :key="index">
+                                <button @click="goTo(index)"
+                                        :class="currentSlide === index ? 'bg-genesis-blue-500 w-8' : 'bg-white/30 w-2 hover:bg-white/50'"
+                                        class="h-2 rounded-full transition-all duration-300">
+                                </button>
+                            </template>
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <div class="mt-8 flex justify-center lg:justify-start items-center gap-4">
+                            <button @click="prev()"
+                                    class="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300 backdrop-blur-sm hover:scale-110 active:scale-95">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button @click="next()"
+                                    class="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300 backdrop-blur-sm hover:scale-110 active:scale-95">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Slider Controls -->
-                <div class="mt-16 flex items-center justify-center gap-x-6">
-                    <a href="{{ route('services') }}" class="rounded-lg bg-gradient-genesis px-6 py-3.5 text-base font-semibold text-white shadow-lg hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-genesis-blue-500 transition-all duration-300">
-                        Découvrir nos services
-                    </a>
-                    <a href="{{ route('contact') }}" class="text-base font-semibold text-white hover:text-gray-300 transition-colors duration-300 flex items-center gap-2">
-                        Nous contacter
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                        </svg>
-                    </a>
+                <!-- Right: Illustration -->
+                <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
+                    <x-illustrations.team-collaboration class="w-full h-auto drop-shadow-2xl" />
                 </div>
-
-                <!-- Slider Dots -->
-                <div class="mt-12 flex justify-center gap-2">
-                    <template x-for="(slide, index) in slides" :key="index">
-                        <button @click="goTo(index)"
-                                :class="currentSlide === index ? 'bg-genesis-blue-500 w-8' : 'bg-white/30 w-2 hover:bg-white/50'"
-                                class="h-2 rounded-full transition-all duration-300">
-                        </button>
-                    </template>
-                </div>
-
-                <!-- Navigation Arrows -->
-                <div class="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-4 pointer-events-none">
-                    <button @click="prev()"
-                            class="pointer-events-auto p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300 backdrop-blur-sm hover:scale-110 active:scale-95">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                    <button @click="next()"
-                            class="pointer-events-auto p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300 backdrop-blur-sm hover:scale-110 active:scale-95">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Right: Illustration -->
-            <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
-                <x-illustrations.team-collaboration class="w-full h-auto drop-shadow-2xl" />
             </div>
         </div>
-    </div>
-
     </div>
 </div>
 
