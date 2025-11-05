@@ -7,18 +7,18 @@
 <div class="bg-gradient-to-b from-gray-900 via-gray-900 to-white dark:to-gray-900 relative isolate overflow-hidden">
     <!-- Decorative Background Elements -->
     <div aria-hidden="true" class="absolute inset-0 -z-10">
-        <div class="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-sky-500/10 via-transparent to-transparent"></div>
+        <div class="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-genesis-blue-500/10 via-transparent to-transparent parallax-slow" data-speed="0.3"></div>
         <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-             class="absolute left-[calc(50%-15rem)] top-0 aspect-[1155/678] w-[50rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-sky-400 to-cyan-400 opacity-20 blur-3xl sm:left-[calc(50%-30rem)] sm:w-[72rem]"></div>
+             class="absolute left-[calc(50%-15rem)] top-0 aspect-[1155/678] w-[50rem] -translate-x-1/2 rotate-[30deg] bg-gradient-genesis opacity-20 blur-3xl sm:left-[calc(50%-30rem)] sm:w-[72rem] parallax-slow float-animation" data-speed="0.3"></div>
         <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-             class="absolute right-[calc(50%-15rem)] top-20 aspect-[1155/678] w-[40rem] translate-x-1/2 rotate-[-30deg] bg-gradient-to-tr from-cyan-400 to-sky-400 opacity-15 blur-3xl sm:right-[calc(50%-20rem)] sm:w-[60rem]"></div>
+             class="absolute right-[calc(50%-15rem)] top-20 aspect-[1155/678] w-[40rem] translate-x-1/2 rotate-[-30deg] bg-gradient-genesis opacity-15 blur-3xl sm:right-[calc(50%-20rem)] sm:w-[60rem] parallax-fast float-animation" data-speed="0.5"></div>
     </div>
 
     <div class="relative px-6 pt-8 lg:px-8">
         <div class="mx-auto max-w-4xl py-16 sm:py-20 lg:py-24">
             <!-- Breadcrumb -->
-            <nav class="flex items-center justify-center gap-x-2 text-sm mb-8">
-                <a href="{{ route('blog.index') }}" class="text-gray-400 hover:text-sky-400 transition-colors duration-300 flex items-center gap-1">
+            <nav class="flex items-center justify-center gap-x-2 text-sm mb-8 animate-on-scroll">
+                <a href="{{ route('blog.index') }}" class="text-gray-400 hover:text-genesis-blue-400 transition-colors duration-300 flex items-center gap-1">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
                     </svg>
@@ -28,29 +28,29 @@
 
             <div class="text-center">
                 <!-- Category Badge -->
-                <div class="flex items-center justify-center mb-6">
-                    <span class="inline-flex items-center gap-x-1.5 rounded-full bg-gradient-to-r from-sky-500/10 to-cyan-500/10 px-4 py-1.5 text-sm font-semibold text-sky-400 ring-1 ring-inset ring-sky-500/30 backdrop-blur-sm">
-                        <svg class="w-2 h-2 fill-sky-400" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3"/></svg>
+                <div class="flex items-center justify-center mb-6 animate-on-scroll">
+                    <span class="inline-flex items-center gap-x-1.5 rounded-full bg-gradient-to-r from-genesis-blue-500/10 to-genesis-purple-600/10 px-4 py-1.5 text-sm font-semibold text-genesis-blue-400 ring-1 ring-inset ring-genesis-blue-500/30 backdrop-blur-sm pulse-glow shimmer">
+                        <svg class="w-2 h-2 fill-genesis-blue-400" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3"/></svg>
                         {{ ucfirst($article->category) }}
                     </span>
                 </div>
 
                 <!-- Title with Gradient -->
-                <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-8 leading-tight">
+                <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-8 leading-tight animate-on-scroll">
                     <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-300">
                         {{ $article->title }}
                     </span>
                 </h1>
 
                 <!-- Excerpt -->
-                <p class="mt-6 text-xl leading-8 text-gray-300 max-w-3xl mx-auto">
+                <p class="mt-6 text-xl leading-8 text-gray-300 max-w-3xl mx-auto animate-on-scroll">
                     {{ $article->excerpt }}
                 </p>
 
                 <!-- Meta Information Card -->
-                <div class="mt-10 inline-flex items-center gap-6 bg-white/5 backdrop-blur-sm rounded-2xl px-6 py-4 ring-1 ring-white/10">
+                <div class="mt-10 inline-flex items-center gap-6 bg-white/5 backdrop-blur-sm rounded-2xl px-6 py-4 ring-1 ring-white/10 card-3d animate-on-scroll">
                     <div class="flex items-center gap-3">
-                        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-sky-400 to-cyan-400 flex items-center justify-center text-white font-bold text-lg ring-2 ring-white/20">
+                        <div class="h-12 w-12 rounded-full bg-gradient-genesis flex items-center justify-center text-white font-bold text-lg ring-2 ring-white/20">
                             {{ substr($article->author->name, 0, 1) }}
                         </div>
                         <div class="text-left">
@@ -84,7 +84,7 @@
 @if($article->image)
 <div class="bg-white dark:bg-gray-900 -mt-16">
     <div class="mx-auto max-w-5xl px-6 lg:px-8">
-        <div class="aspect-[21/9] w-full overflow-hidden rounded-3xl shadow-2xl ring-1 ring-gray-900/10 dark:ring-white/10">
+        <div class="aspect-[21/9] w-full overflow-hidden rounded-3xl shadow-2xl ring-1 ring-gray-900/10 dark:ring-white/10 card-3d animate-on-scroll">
             <img src="{{ asset($article->image) }}" alt="{{ $article->title }}" class="h-full w-full object-cover">
         </div>
     </div>
@@ -124,21 +124,21 @@
                             <div class="flex gap-2">
                                 <a href="https://twitter.com/intent/tweet?text={{ urlencode($article->title) }}&url={{ urlencode(route('blog.show', $article)) }}"
                                    target="_blank"
-                                   class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-sky-100 dark:hover:bg-sky-900/20 hover:text-sky-600 dark:hover:text-sky-400 transition-all duration-300 ring-1 ring-gray-200 dark:ring-gray-700 hover:ring-sky-500/50">
+                                   class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-genesis-blue-100 dark:hover:bg-genesis-blue-900/20 hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 transition-all duration-300 ring-1 ring-gray-200 dark:ring-gray-700 hover:ring-genesis-blue-500/50 hover:scale-110">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
                                     </svg>
                                 </a>
                                 <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ urlencode(route('blog.show', $article)) }}"
                                    target="_blank"
-                                   class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-sky-100 dark:hover:bg-sky-900/20 hover:text-sky-600 dark:hover:text-sky-400 transition-all duration-300 ring-1 ring-gray-200 dark:ring-gray-700 hover:ring-sky-500/50">
+                                   class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-genesis-blue-100 dark:hover:bg-genesis-blue-900/20 hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 transition-all duration-300 ring-1 ring-gray-200 dark:ring-gray-700 hover:ring-genesis-blue-500/50 hover:scale-110">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                                     </svg>
                                 </a>
                                 <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('blog.show', $article)) }}"
                                    target="_blank"
-                                   class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-sky-100 dark:hover:bg-sky-900/20 hover:text-sky-600 dark:hover:text-sky-400 transition-all duration-300 ring-1 ring-gray-200 dark:ring-gray-700 hover:ring-sky-500/50">
+                                   class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-genesis-blue-100 dark:hover:bg-genesis-blue-900/20 hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 transition-all duration-300 ring-1 ring-gray-200 dark:ring-gray-700 hover:ring-genesis-blue-500/50 hover:scale-110">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                                     </svg>

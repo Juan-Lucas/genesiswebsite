@@ -7,29 +7,29 @@
 <div class="relative bg-gradient-to-b from-gray-900 via-gray-900 to-white dark:to-gray-900 overflow-hidden">
     <!-- Decorative background elements -->
     <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-sky-500/20 dark:bg-sky-500/10 rounded-full blur-3xl"></div>
-        <div class="absolute top-20 -left-40 w-96 h-96 bg-cyan-500/20 dark:bg-cyan-500/10 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-20 right-20 w-80 h-80 bg-blue-500/20 dark:bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-genesis-blue-500/20 dark:bg-genesis-blue-500/10 rounded-full blur-3xl parallax-slow float-animation" data-speed="0.3"></div>
+        <div class="absolute top-20 -left-40 w-96 h-96 bg-genesis-purple-600/20 dark:bg-genesis-purple-600/10 rounded-full blur-3xl parallax-fast float-animation" data-speed="0.5"></div>
+        <div class="absolute -bottom-20 right-20 w-80 h-80 bg-genesis-blue-500/20 dark:bg-genesis-blue-500/10 rounded-full blur-3xl float-animation" style="animation-delay: 0.5s;"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         <div class="text-center">
             <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-full mb-6">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-full mb-6 pulse-glow shimmer animate-on-scroll">
                 <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-genesis-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-genesis-blue-500"></span>
                 </span>
                 <span class="text-sm font-medium text-white">Actualités & Conseils</span>
             </div>
 
-            <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
+            <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl animate-on-scroll">
                 <span class="block">Blog & Actualités</span>
-                <span class="block mt-2 bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                <span class="block mt-2 bg-gradient-genesis bg-clip-text text-transparent">
                     Tendances & Innovations
                 </span>
             </h1>
-            <p class="mt-6 max-w-3xl mx-auto text-xl text-gray-300 leading-relaxed">
+            <p class="mt-6 max-w-3xl mx-auto text-xl text-gray-300 leading-relaxed animate-on-scroll">
                 Découvrez nos articles sur les technologies, le développement web, et les dernières tendances du digital
             </p>
         </div>
@@ -78,9 +78,9 @@
 <div class="bg-gray-50 dark:bg-gray-900 py-16 sm:py-20">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         @if($articles->count() > 0)
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 stagger-parent">
                 @foreach($articles as $article)
-                    <article class="group flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-all duration-300 ring-1 ring-gray-200 dark:ring-gray-700 hover:ring-sky-500/50 hover:-translate-y-2">
+                    <article class="group flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-all duration-300 ring-1 ring-gray-200 dark:ring-gray-700 hover:ring-genesis-blue-500/50 hover:-translate-y-2 stagger-child card-3d animate-on-scroll">
                         @if($article->image)
                             <div class="aspect-[16/9] w-full overflow-hidden bg-gray-100 dark:bg-gray-700">
                                 <img src="{{ asset($article->image) }}" alt="{{ $article->title }}" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -102,8 +102,8 @@
                         <div class="flex flex-1 flex-col justify-between p-6">
                             <div class="flex-1">
                                 <div class="flex items-center gap-x-3 text-xs mb-4">
-                                    <span class="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-sky-500/10 to-cyan-500/10 px-3 py-1 text-sky-600 dark:text-sky-400 font-semibold ring-1 ring-inset ring-sky-500/30">
-                                        <svg class="w-2 h-2 fill-sky-500" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3"/></svg>
+                                    <span class="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-genesis-blue-500/10 to-genesis-purple-600/10 px-3 py-1 text-genesis-blue-600 dark:text-genesis-blue-400 font-semibold ring-1 ring-inset ring-genesis-blue-500/30">
+                                        <svg class="w-2 h-2 fill-genesis-blue-500" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3"/></svg>
                                         {{ ucfirst($article->category) }}
                                     </span>
                                     <span class="text-gray-400">•</span>
@@ -113,7 +113,7 @@
                                 </div>
 
                                 <a href="{{ route('blog.show', $article) }}" class="block group-article">
-                                    <h3 class="text-xl font-bold leading-7 text-gray-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors duration-300 mb-3">
+                                    <h3 class="text-xl font-bold leading-7 text-gray-900 dark:text-white group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors duration-300 mb-3">
                                         {{ $article->title }}
                                     </h3>
                                     <p class="text-sm leading-6 text-gray-600 dark:text-gray-400 line-clamp-3">
@@ -124,7 +124,7 @@
 
                             <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between">
                                 <div class="flex items-center gap-x-3">
-                                    <div class="h-10 w-10 rounded-full bg-gradient-to-br from-sky-400 to-cyan-400 flex items-center justify-center text-white font-semibold shadow-lg">
+                                    <div class="h-10 w-10 rounded-full bg-gradient-genesis flex items-center justify-center text-white font-semibold shadow-lg">
                                         {{ substr($article->author->name, 0, 1) }}
                                     </div>
                                     <div class="text-sm leading-5">
@@ -132,7 +132,7 @@
                                         <p class="text-xs text-gray-500 dark:text-gray-400">Auteur</p>
                                     </div>
                                 </div>
-                                <a href="{{ route('blog.show', $article) }}" class="inline-flex items-center gap-1 text-sm font-semibold text-sky-600 dark:text-sky-400 group-hover:gap-2 transition-all duration-300">
+                                <a href="{{ route('blog.show', $article) }}" class="inline-flex items-center gap-1 text-sm font-semibold text-genesis-blue-600 dark:text-genesis-blue-400 group-hover:gap-2 transition-all duration-300">
                                     Lire
                                     <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -157,7 +157,7 @@
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Aucun article trouvé</h3>
                 <p class="text-base text-gray-600 dark:text-gray-400 mb-6">Aucun article n'a été publié dans cette catégorie pour le moment.</p>
-                <a href="{{ route('blog.index') }}" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-sky-600 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <a href="{{ route('blog.index') }}" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-genesis text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
                     </svg>
