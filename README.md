@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/Juan-Lucas/genesiswebsite/actions">
-    <img src="https://github.com/Juan-Lucas/genesiswebsite/actions/workflows/laravel-app.yml/badge.svg" alt="Statut CI">
+    <img src="https://github.com/Juan-Lucas/genesiswebsite/actions/workflows/laravel-ci.yml/badge.svg" alt="Statut CI">
   </a>
   <br>
   <sub>Voir les workflows CI sur GitHub Actions</sub>
