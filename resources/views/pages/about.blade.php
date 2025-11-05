@@ -7,25 +7,25 @@
 <div class="relative bg-gradient-to-b from-gray-900 via-gray-900 to-white dark:to-gray-900 overflow-hidden">
     <!-- Decorative background -->
     <div class="absolute inset-0">
-        <div class="absolute top-0 right-1/4 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-genesis-blue-500/20 rounded-full blur-3xl parallax-slow float-animation" data-speed="0.3"></div>
+        <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-genesis-purple-600/20 rounded-full blur-3xl parallax-fast float-animation" data-speed="0.5"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div class="text-center">
             <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700 mb-8">
-                <svg class="h-4 w-4 text-sky-400" fill="currentColor" viewBox="0 0 20 20">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700 mb-8 pulse-glow shimmer animate-on-scroll">
+                <svg class="h-4 w-4 text-genesis-blue-400" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <span class="text-sm font-medium text-white dark:text-gray-200">Votre partenaire de confiance</span>
             </div>
 
             <!-- Title -->
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
-                À propos de <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">Genesis</span>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight animate-on-scroll">
+                À propos de <span class="bg-gradient-genesis bg-clip-text text-transparent">Genesis</span>
             </h1>
-            <p class="mt-6 text-xl md:text-2xl text-gray-300 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            <p class="mt-6 text-xl md:text-2xl text-gray-300 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed animate-on-scroll">
                 Votre partenaire de confiance pour l'innovation digitale depuis 2020
             </p>
         </div>
@@ -68,8 +68,8 @@
 
                 <!-- Feature list -->
                 <div class="grid grid-cols-2 gap-4 pt-6">
-                    <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-sky-100 dark:bg-sky-900/30 flex items-center justify-center">
+                    <div class="flex items-start gap-3 animate-on-scroll" style="animation-delay: 0.1s;">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-genesis-blue-100 dark:bg-genesis-blue-900/30 flex items-center justify-center">
                             <svg class="h-6 w-6 text-sky-600 dark:text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
@@ -79,8 +79,8 @@
                             <p class="text-sm text-gray-600 dark:text-gray-400">Standards élevés</p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-3">
-                        <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-cyan-100 dark:bg-cyan-900/30 flex items-center justify-center">
+                    <div class="flex items-start gap-3 animate-on-scroll" style="animation-delay: 0.2s;">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-lg bg-genesis-purple-100 dark:bg-genesis-purple-900/30 flex items-center justify-center group-hover:scale-110 transition-transform">
                             <svg class="h-6 w-6 text-cyan-600 dark:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                             </svg>
@@ -94,31 +94,31 @@
             </div>
 
             <!-- Stats card -->
-            <div class="mt-12 lg:mt-0">
-                <div class="relative group">
+            <div class="mt-12 lg:mt-0 animate-on-scroll">
+                <div class="relative group card-3d">
                     <!-- Glow effect -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-sky-500 via-cyan-500 to-blue-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                    <div class="absolute inset-0 bg-gradient-genesis rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
 
                     <!-- Card content -->
-                    <div class="relative bg-gradient-to-br from-sky-500 via-cyan-500 to-blue-500 rounded-2xl p-8 text-white shadow-2xl">
+                    <div class="relative bg-gradient-genesis rounded-2xl p-8 text-white shadow-2xl">
                         <div class="absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 rounded-full bg-white/10 blur-2xl"></div>
                         <div class="absolute bottom-0 left-0 -mb-4 -ml-4 h-32 w-32 rounded-full bg-white/10 blur-2xl"></div>
 
                         <div class="relative grid grid-cols-2 gap-8">
-                            <div class="text-center p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                                <div class="text-5xl font-bold mb-2">150+</div>
+                            <div class="text-center p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 stat-card">
+                                <div class="text-5xl font-bold mb-2"><span data-count="150">0</span>+</div>
                                 <div class="text-sm uppercase tracking-wider text-white/90">Projets réalisés</div>
                             </div>
-                            <div class="text-center p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                                <div class="text-5xl font-bold mb-2">98%</div>
+                            <div class="text-center p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 stat-card">
+                                <div class="text-5xl font-bold mb-2"><span data-count="98">0</span>%</div>
                                 <div class="text-sm uppercase tracking-wider text-white/90">Clients satisfaits</div>
                             </div>
-                            <div class="text-center p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                                <div class="text-5xl font-bold mb-2">25+</div>
+                            <div class="text-center p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 stat-card">
+                                <div class="text-5xl font-bold mb-2"><span data-count="25">0</span>+</div>
                                 <div class="text-sm uppercase tracking-wider text-white/90">Experts passionnés</div>
                             </div>
-                            <div class="text-center p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                                <div class="text-5xl font-bold mb-2">10+</div>
+                            <div class="text-center p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 stat-card">
+                                <div class="text-5xl font-bold mb-2"><span data-count="10">0</span>+</div>
                                 <div class="text-sm uppercase tracking-wider text-white/90">Années d'expérience</div>
                             </div>
                         </div>
@@ -142,23 +142,23 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3 stagger-parent">
             <!-- Value 1 -->
-            <div class="group relative bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700">
-                <div class="absolute inset-0 bg-gradient-to-br from-sky-500/10 via-transparent to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="group relative bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
+                <div class="absolute inset-0 bg-gradient-genesis opacity-10 rounded-2xl group-hover:opacity-20 transition-opacity"></div>
 
                 <div class="relative">
                     <!-- Icon -->
                     <div class="relative inline-flex items-center justify-center h-16 w-16 mb-6">
-                        <div class="absolute inset-0 bg-gradient-to-br from-sky-500 to-cyan-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                        <div class="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-500 text-white group-hover:scale-110 transition-transform">
+                        <div class="absolute inset-0 bg-gradient-genesis rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                        <div class="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-genesis text-white group-hover:scale-110 transition-transform">
                             <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                             </svg>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">
                         Innovation
                     </h3>
                     <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -168,21 +168,21 @@
             </div>
 
             <!-- Value 2 -->
-            <div class="group relative bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700">
-                <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="group relative bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
+                <div class="absolute inset-0 bg-gradient-genesis opacity-10 rounded-2xl group-hover:opacity-20 transition-opacity"></div>
 
                 <div class="relative">
                     <!-- Icon -->
                     <div class="relative inline-flex items-center justify-center h-16 w-16 mb-6">
-                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                        <div class="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 text-white group-hover:scale-110 transition-transform">
+                        <div class="absolute inset-0 bg-gradient-genesis rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                        <div class="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-genesis text-white group-hover:scale-110 transition-transform">
                             <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                             </svg>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">
                         Collaboration
                     </h3>
                     <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -192,21 +192,21 @@
             </div>
 
             <!-- Value 3 -->
-            <div class="group relative bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700">
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="group relative bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
+                <div class="absolute inset-0 bg-gradient-genesis opacity-10 rounded-2xl group-hover:opacity-20 transition-opacity"></div>
 
                 <div class="relative">
                     <!-- Icon -->
                     <div class="relative inline-flex items-center justify-center h-16 w-16 mb-6">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                        <div class="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 text-white group-hover:scale-110 transition-transform">
+                        <div class="absolute inset-0 bg-gradient-genesis rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                        <div class="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-genesis text-white group-hover:scale-110 transition-transform">
                             <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
                             </svg>
                         </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-genesis-purple-600 dark:group-hover:text-genesis-purple-400 transition-colors">
                         Excellence
                     </h3>
                     <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -231,14 +231,14 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 stagger-parent">
             <!-- Team Member 1 -->
-            <div class="group text-center">
+            <div class="group text-center stagger-child animate-on-scroll opacity-0 translate-y-10">
                 <div class="relative inline-block mb-6">
                     <!-- Glow effect -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-sky-500 to-cyan-500 rounded-full blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
+                    <div class="absolute inset-0 bg-gradient-genesis rounded-full blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
                     <!-- Avatar -->
-                    <div class="relative mx-auto h-40 w-40 rounded-full bg-gradient-to-br from-sky-500 to-cyan-500 flex items-center justify-center text-white text-5xl font-bold ring-4 ring-white dark:ring-gray-800 group-hover:scale-110 transition-transform duration-300">
+                    <div class="relative mx-auto h-40 w-40 rounded-full bg-gradient-genesis flex items-center justify-center text-white text-5xl font-bold ring-4 ring-white dark:ring-gray-800 group-hover:scale-110 transition-transform duration-300">
                         JD
                     </div>
                     <!-- Status indicator -->
@@ -267,10 +267,10 @@
             </div>
 
             <!-- Team Member 2 -->
-            <div class="group text-center">
+            <div class="group text-center stagger-child animate-on-scroll opacity-0 translate-y-10">
                 <div class="relative inline-block mb-6">
-                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
-                    <div class="relative mx-auto h-40 w-40 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white text-5xl font-bold ring-4 ring-white dark:ring-gray-800 group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-genesis rounded-full blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
+                    <div class="relative mx-auto h-40 w-40 rounded-full bg-gradient-genesis flex items-center justify-center text-white text-5xl font-bold ring-4 ring-white dark:ring-gray-800 group-hover:scale-110 transition-transform duration-300">
                         MM
                     </div>
                     <div class="absolute bottom-2 right-2 h-6 w-6 bg-green-400 rounded-full ring-4 ring-white dark:ring-gray-800 flex items-center justify-center">
@@ -297,10 +297,10 @@
             </div>
 
             <!-- Team Member 3 -->
-            <div class="group text-center">
+            <div class="group text-center stagger-child animate-on-scroll opacity-0 translate-y-10">
                 <div class="relative inline-block mb-6">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
-                    <div class="relative mx-auto h-40 w-40 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-white text-5xl font-bold ring-4 ring-white dark:ring-gray-800 group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-genesis rounded-full blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
+                    <div class="relative mx-auto h-40 w-40 rounded-full bg-gradient-genesis flex items-center justify-center text-white text-5xl font-bold ring-4 ring-white dark:ring-gray-800 group-hover:scale-110 transition-transform duration-300">
                         PD
                     </div>
                     <div class="absolute bottom-2 right-2 h-6 w-6 bg-green-400 rounded-full ring-4 ring-white dark:ring-gray-800 flex items-center justify-center">
@@ -327,10 +327,10 @@
             </div>
 
             <!-- Team Member 4 -->
-            <div class="group text-center">
+            <div class="group text-center stagger-child animate-on-scroll opacity-0 translate-y-10">
                 <div class="relative inline-block mb-6">
-                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
-                    <div class="relative mx-auto h-40 w-40 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-5xl font-bold ring-4 ring-white dark:ring-gray-800 group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-genesis rounded-full blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
+                    <div class="relative mx-auto h-40 w-40 rounded-full bg-gradient-genesis flex items-center justify-center text-white text-5xl font-bold ring-4 ring-white dark:ring-gray-800 group-hover:scale-110 transition-transform duration-300">
                         SB
                     </div>
                     <div class="absolute bottom-2 right-2 h-6 w-6 bg-green-400 rounded-full ring-4 ring-white dark:ring-gray-800 flex items-center justify-center">
@@ -360,20 +360,20 @@
 </div>
 
 <!-- CTA Section -->
-<div class="relative bg-gradient-to-br from-sky-500 via-cyan-500 to-blue-600 overflow-hidden">
+<div class="relative bg-gradient-genesis overflow-hidden">
     <!-- Decorative elements -->
     <div class="absolute inset-0">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl float-animation" style="animation-delay: 0.5s;"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl float-animation" style="animation-delay: 1s;"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
         <div class="lg:flex lg:items-center lg:justify-between">
             <div class="max-w-xl">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight animate-on-scroll">
                     Rejoignez l'aventure Genesis
                 </h2>
-                <p class="text-xl text-white/90 leading-relaxed">
+                <p class="text-xl text-white/90 leading-relaxed animate-on-scroll">
                     Commencez votre projet aujourd'hui et transformez vos idées en réalité digitale
                 </p>
             </div>
