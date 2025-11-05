@@ -35,31 +35,29 @@ Route::get('/blog/{article}', [BlogController::class, 'show'])->name('blog.show'
 Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 
 // Admin dashboard routes
-Route::middleware(['auth', 'verified'])->prefix('dashboard')->name('admin.')->group(function () {
-    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::prefix('dashboard')->name('admin.')->group(function () {
+        Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-    // Projects management
-    Route::resource('projects', AdminProjectController::class)->except(['show']);
-    Route::post('projects/{project}/toggle-publish', [AdminProjectController::class, 'togglePublish'])->name('projects.toggle-publish');
+        // Projects management
+        Route::resource('projects', AdminProjectController::class)->except(['show']);
+        Route::post('projects/{project}/toggle-publish', [AdminProjectController::class, 'togglePublish'])->name('projects.toggle-publish');
 
-    // Services management
-    Route::resource('services', AdminServiceController::class)->except(['show']);
-    Route::post('services/{service}/toggle-publish', [AdminServiceController::class, 'togglePublish'])->name('services.toggle-publish');
-    Route::post('services/reorder', [AdminServiceController::class, 'reorder'])->name('services.reorder');
+        // Services management
+        Route::resource('services', AdminServiceController::class)->except(['show']);
+        Route::post('services/{service}/toggle-publish', [AdminServiceController::class, 'togglePublish'])->name('services.toggle-publish');
+        Route::post('services/reorder', [AdminServiceController::class, 'reorder'])->name('services.reorder');
 
-    // Articles management
-    Route::resource('articles', AdminArticleController::class)->except(['show']);
-    Route::post('articles/{article}/toggle-publish', [AdminArticleController::class, 'togglePublish'])->name('articles.toggle-publish');
+        // Articles management
+        Route::resource('articles', AdminArticleController::class)->except(['show']);
+        Route::post('articles/{article}/toggle-publish', [AdminArticleController::class, 'togglePublish'])->name('articles.toggle-publish');
 
-    // Profile management
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+        // Profile management
+        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    });
 });
-
-Route::get('/dashboard', function () {
-    return redirect()->route('admin.dashboard');
-})->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
     // Legacy profile routes (kept for compatibility)
