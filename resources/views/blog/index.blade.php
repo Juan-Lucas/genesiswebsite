@@ -37,7 +37,7 @@
 
             <!-- Illustration -->
             <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
-                <x-illustrations.article-blog class="w-full h-auto drop-shadow-2xl" />
+                <x-illustrations.article-news class="w-full h-auto drop-shadow-2xl" />
             </div>
         </div>
     </div>
