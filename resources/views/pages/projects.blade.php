@@ -70,7 +70,7 @@
                     </p>
                     <div class="flex flex-wrap gap-2">
                         @foreach(array_slice($project->technologies, 0, 3) as $tech)
-                        <span class="px-3 py-1 text-xs font-medium bg-{{ $project->color }}-100 dark:bg-{{ $project->color }}-900/30 text-{{ $project->color }}-700 dark:text-{{ $project->color }}-300 rounded-full">{{ $tech }}</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-{{ $project->color }}-100 dark:bg-{{ $project->color }}-900/30 text-genesis-blue-600 dark:text-genesis-blue-400 rounded-full">{{ $tech }}</span>
                         @endforeach
                     </div>
                 </div>
