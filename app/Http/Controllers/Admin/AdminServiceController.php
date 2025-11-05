@@ -58,7 +58,7 @@ class AdminServiceController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'slug' => 'nullable|string|unique:services,slug,' . $service->id,
+            'slug' => 'nullable|string|unique:services,slug,'.$service->id,
             'description' => 'required|string',
             'content' => 'required|string',
             'features' => 'nullable|json',

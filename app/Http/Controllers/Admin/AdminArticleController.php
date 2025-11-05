@@ -56,7 +56,7 @@ class AdminArticleController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'slug' => 'nullable|string|unique:articles,slug,' . $article->id,
+            'slug' => 'nullable|string|unique:articles,slug,'.$article->id,
             'excerpt' => 'required|string',
             'content' => 'required|string',
             'category' => 'nullable|string|max:255',

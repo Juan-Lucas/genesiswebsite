@@ -58,7 +58,7 @@ class AdminProjectController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'slug' => 'nullable|string|unique:projects,slug,' . $project->id,
+            'slug' => 'nullable|string|unique:projects,slug,'.$project->id,
             'category' => 'required|string|max:255',
             'client' => 'nullable|string|max:255',
             'year' => 'nullable|integer|min:2000|max:2100',
