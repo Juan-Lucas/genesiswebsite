@@ -45,6 +45,11 @@ jobs:
     - name: Generate application key
       run: php artisan key:generate
 
+    - name: Build assets
+      run: |
+        npm ci
+        npm run build
+
     - name: Run migrations
       env:
         DB_CONNECTION: mysql
@@ -65,8 +70,3 @@ jobs:
         DB_PASSWORD: root
         DB_HOST: 127.0.0.1
       run: ./vendor/bin/pest
-
-    - name: Build assets
-      run: |
-        npm ci
-        npm run build
