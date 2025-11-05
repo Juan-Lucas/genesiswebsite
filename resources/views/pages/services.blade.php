@@ -87,7 +87,7 @@
                     @endif
 
                     <!-- CTA Link with icon -->
-                    <div class="flex items-center gap-2 text-{{ $service->color }}-500 font-semibold group-hover:gap-4 transition-all duration-300">
+                    <div class="flex items-center gap-2 text-genesis-blue-600 dark:text-genesis-blue-400 font-semibold group-hover:gap-4 transition-all duration-300">
                         <span>En savoir plus</span>
                         <svg class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -180,7 +180,7 @@
                     </ul>
 
                     <!-- CTA text -->
-                    <div class="flex items-center gap-2 text-{{ $fallbackService['color'] }}-500 font-semibold">
+                    <div class="flex items-center gap-2 text-genesis-blue-600 dark:text-genesis-blue-400 font-semibold">
                         <span>En savoir plus</span>
                         <svg class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
