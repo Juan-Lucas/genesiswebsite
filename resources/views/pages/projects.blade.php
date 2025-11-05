@@ -7,27 +7,27 @@
 <div class="relative bg-gradient-to-b from-gray-900 via-gray-900 to-white dark:to-gray-900 overflow-hidden">
     <!-- Decorative background elements -->
     <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-sky-500/20 dark:bg-sky-500/10 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/20 dark:bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-genesis-blue-500/20 dark:bg-genesis-blue-500/10 rounded-full blur-3xl parallax-slow float-animation" data-speed="0.3"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-genesis-purple-600/20 dark:bg-genesis-purple-600/10 rounded-full blur-3xl parallax-fast float-animation" data-speed="0.5"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         <div class="text-center">
             <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-full mb-6">
-                <svg class="h-5 w-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-full mb-6 pulse-glow shimmer animate-on-scroll">
+                <svg class="h-5 w-5 text-genesis-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
                 <span class="text-sm font-medium text-white">Portfolio</span>
             </div>
 
-            <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
+            <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl animate-on-scroll">
                 <span class="block">Nos Projets</span>
-                <span class="block bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                <span class="block bg-gradient-genesis bg-clip-text text-transparent">
                     Réalisations & Succès
                 </span>
             </h1>
-            <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-300">
+            <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-300 animate-on-scroll">
                 Découvrez comment nous transformons les idées en solutions digitales innovantes et performantes
             </p>
         </div>
@@ -44,9 +44,9 @@
 <!-- Projects Grid -->
 <div class="bg-gray-50 dark:bg-gray-800 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 stagger-parent">
             <!-- Project 1 -->
-            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
                 <div class="relative h-56 bg-gradient-to-br from-sky-500 via-cyan-500 to-blue-600 flex items-center justify-center overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-blue-600/20 group-hover:scale-110 transition-transform duration-300"></div>
                     <div class="relative">
@@ -79,7 +79,7 @@
             </div>
 
             <!-- Project 2 -->
-            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
                 <div class="relative h-56 bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-600 flex items-center justify-center overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-indigo-600/20 group-hover:scale-110 transition-transform duration-300"></div>
                     <div class="relative">
@@ -112,7 +112,7 @@
             </div>
 
             <!-- Project 3 -->
-            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
                 <div class="relative h-56 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 flex items-center justify-center overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-600/20 group-hover:scale-110 transition-transform duration-300"></div>
                     <div class="relative">
@@ -145,7 +145,7 @@
             </div>
 
             <!-- Project 4 -->
-            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
                 <div class="relative h-56 bg-gradient-to-br from-amber-500 via-orange-500 to-red-600 flex items-center justify-center overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-red-600/20 group-hover:scale-110 transition-transform duration-300"></div>
                     <div class="relative">
@@ -178,7 +178,7 @@
             </div>
 
             <!-- Project 5 -->
-            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
                 <div class="relative h-56 bg-gradient-to-br from-pink-500 via-rose-500 to-red-600 flex items-center justify-center overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-red-600/20 group-hover:scale-110 transition-transform duration-300"></div>
                     <div class="relative">
@@ -211,7 +211,7 @@
             </div>
 
             <!-- Project 6 -->
-            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
                 <div class="relative h-56 bg-gradient-to-br from-purple-500 via-indigo-500 to-blue-600 flex items-center justify-center overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-600/20 group-hover:scale-110 transition-transform duration-300"></div>
                     <div class="relative">
@@ -250,48 +250,52 @@
 <div class="bg-white dark:bg-gray-900 py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+            <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl animate-on-scroll">
                 Notre Impact en
-                <span class="bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-600 bg-clip-text text-transparent">Chiffres</span>
+                <span class="bg-gradient-genesis bg-clip-text text-transparent">Chiffres</span>
             </h2>
             <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                 Des résultats mesurables qui témoignent de notre engagement et de notre expertise
             </p>
         </div>
         <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
-            <div class="text-center group">
-                <div class="text-5xl font-bold bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent mb-2">150+</div>
-                <div class="text-base font-medium text-gray-600 dark:text-gray-400">Projets livrés</div>
+            <div class="text-center group stat-card animate-on-scroll hover:scale-105 transition-transform duration-300">
+                <div class="text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">
+                    <span data-count="150">0</span>+
+                </div>
+                <div class="text-base font-medium text-gray-600 dark:text-gray-400 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">Projets livrés</div>
             </div>
-            <div class="text-center group">
-                <div class="text-5xl font-bold bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent mb-2">98%</div>
-                <div class="text-base font-medium text-gray-600 dark:text-gray-400">Satisfaction client</div>
+            <div class="text-center group stat-card animate-on-scroll hover:scale-105 transition-transform duration-300">
+                <div class="text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">
+                    <span data-count="98">0</span>%
+                </div>
+                <div class="text-base font-medium text-gray-600 dark:text-gray-400 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">Satisfaction client</div>
             </div>
-            <div class="text-center group">
-                <div class="text-5xl font-bold bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent mb-2">2M+</div>
-                <div class="text-base font-medium text-gray-600 dark:text-gray-400">Utilisateurs actifs</div>
+            <div class="text-center group stat-card animate-on-scroll hover:scale-105 transition-transform duration-300">
+                <div class="text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">2M+</div>
+                <div class="text-base font-medium text-gray-600 dark:text-gray-400 group-hover:text-genesis-purple-600 dark:group-hover:text-genesis-purple-400 transition-colors">Utilisateurs actifs</div>
             </div>
-            <div class="text-center group">
-                <div class="text-5xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent mb-2">24/7</div>
-                <div class="text-base font-medium text-gray-600 dark:text-gray-400">Support technique</div>
+            <div class="text-center group stat-card animate-on-scroll hover:scale-105 transition-transform duration-300">
+                <div class="text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">24/7</div>
+                <div class="text-base font-medium text-gray-600 dark:text-gray-400 group-hover:text-genesis-purple-600 dark:group-hover:text-genesis-purple-400 transition-colors">Support technique</div>
             </div>
         </div>
     </div>
 </div>
 
 <!-- CTA Section -->
-<div class="relative bg-gradient-to-br from-sky-500 via-cyan-500 to-blue-600 dark:from-sky-900 dark:via-cyan-900 dark:to-blue-900 overflow-hidden">
+<div class="relative bg-gradient-genesis overflow-hidden">
     <!-- Decorative elements -->
     <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-white/10 rounded-full blur-3xl float-animation" style="animation-delay: 0.5s;"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-white/10 rounded-full blur-3xl float-animation" style="animation-delay: 1s;"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <h2 class="text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">
+        <h2 class="text-3xl font-extrabold text-white sm:text-4xl md:text-5xl animate-on-scroll">
             Votre Projet est le Prochain ?
         </h2>
-        <p class="mt-6 text-lg text-white/90 max-w-2xl mx-auto">
+        <p class="mt-6 text-lg text-white/90 max-w-2xl mx-auto animate-on-scroll">
             Discutons de votre vision et créons ensemble quelque chose d'extraordinaire qui marquera les esprits
         </p>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
