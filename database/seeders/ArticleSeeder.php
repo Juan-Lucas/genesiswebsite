@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Article;
 use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Str;
 
 class ArticleSeeder extends Seeder
 {
@@ -17,7 +16,7 @@ class ArticleSeeder extends Seeder
         // Get or create a user for the articles
         $author = User::first();
 
-        if (!$author) {
+        if (! $author) {
             $author = User::create([
                 'name' => 'Genesis Admin',
                 'email' => 'admin@genesis.com',

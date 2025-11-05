@@ -32,7 +32,7 @@ class SetLocale
         }
 
         // Validate locale
-        if (!array_key_exists($locale, config('app.available_locales'))) {
+        if (! array_key_exists($locale, config('app.available_locales'))) {
             $locale = config('app.locale');
         }
 
