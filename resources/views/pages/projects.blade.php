@@ -14,29 +14,29 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="text-center lg:text-left">
-            <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-full mb-6 pulse-glow shimmer animate-on-scroll">
-                <svg class="h-5 w-5 text-genesis-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-                <span class="text-sm font-medium text-white">Portfolio</span>
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-full mb-6 pulse-glow shimmer animate-on-scroll">
+                    <svg class="h-5 w-5 text-genesis-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="text-sm font-medium text-white">Portfolio</span>
+                </div>
+
+                <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl animate-on-scroll">
+                    <span class="block">Nos Projets</span>
+                    <span class="block bg-gradient-genesis bg-clip-text text-transparent">
+                        Réalisations & Succès
+                    </span>
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto lg:mx-0 text-xl text-gray-300 animate-on-scroll">
+                    Découvrez comment nous transformons les idées en solutions digitales innovantes et performantes
+                </p>
             </div>
 
-            <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl animate-on-scroll">
-                <span class="block">Nos Projets</span>
-                <span class="block bg-gradient-genesis bg-clip-text text-transparent">
-                    Réalisations & Succès
-                </span>
-            </h1>
-            <p class="mt-6 max-w-2xl mx-auto lg:mx-0 text-xl text-gray-300 animate-on-scroll">
-                Découvrez comment nous transformons les idées en solutions digitales innovantes et performantes
-            </p>
-        </div>
-
-        <!-- Illustration -->
-        <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
-            <x-illustrations.web-design class="w-full h-auto drop-shadow-2xl" />
-        </div>
+            <!-- Illustration -->
+            <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
+                <x-illustrations.web-design class="w-full h-auto drop-shadow-2xl" />
+            </div>
         </div>
     </div>
 
