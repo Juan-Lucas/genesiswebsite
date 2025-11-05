@@ -13,25 +13,32 @@
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-        <div class="text-center">
-            <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-full mb-6 pulse-glow shimmer animate-on-scroll">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-genesis-blue-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-genesis-blue-500"></span>
-                </span>
-                <span class="text-sm font-medium text-white">Actualités & Conseils</span>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-full mb-6 pulse-glow shimmer animate-on-scroll">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-genesis-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-genesis-blue-500"></span>
+                    </span>
+                    <span class="text-sm font-medium text-white">Actualités & Conseils</span>
+                </div>
+
+                <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl animate-on-scroll">
+                    <span class="block">Blog & Actualités</span>
+                    <span class="block mt-2 bg-gradient-genesis bg-clip-text text-transparent">
+                        Tendances & Innovations
+                    </span>
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto lg:mx-0 text-xl text-gray-300 leading-relaxed animate-on-scroll">
+                    Découvrez nos articles sur les technologies, le développement web, et les dernières tendances du digital
+                </p>
             </div>
 
-            <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl animate-on-scroll">
-                <span class="block">Blog & Actualités</span>
-                <span class="block mt-2 bg-gradient-genesis bg-clip-text text-transparent">
-                    Tendances & Innovations
-                </span>
-            </h1>
-            <p class="mt-6 max-w-3xl mx-auto text-xl text-gray-300 leading-relaxed animate-on-scroll">
-                Découvrez nos articles sur les technologies, le développement web, et les dernières tendances du digital
-            </p>
+            <!-- Illustration -->
+            <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
+                <x-illustrations.article-blog class="w-full h-auto drop-shadow-2xl" />
+            </div>
         </div>
     </div>
 
