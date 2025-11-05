@@ -13,24 +13,31 @@
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-        <div class="text-center">
-            <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-full mb-6 pulse-glow shimmer animate-on-scroll">
-                <svg class="h-5 w-5 text-genesis-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-                <span class="text-sm font-medium text-white">Nous sommes à votre écoute</span>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 dark:bg-white/5 backdrop-blur-sm border border-white/20 rounded-full mb-6 pulse-glow shimmer animate-on-scroll">
+                    <svg class="h-5 w-5 text-genesis-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span class="text-sm font-medium text-white">Nous sommes à votre écoute</span>
+                </div>
+
+                <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl animate-on-scroll">
+                    <span class="block">Contactez-nous</span>
+                    <span class="block mt-2 bg-gradient-genesis bg-clip-text text-transparent">
+                        Discutons de votre projet
+                    </span>
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto lg:mx-0 text-xl text-gray-300 leading-relaxed animate-on-scroll">
+                    Notre équipe d'experts est prête à vous accompagner dans la réalisation de vos ambitions digitales
+                </p>
             </div>
 
-            <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl animate-on-scroll">
-                <span class="block">Contactez-nous</span>
-                <span class="block mt-2 bg-gradient-genesis bg-clip-text text-transparent">
-                    Discutons de votre projet
-                </span>
-            </h1>
-            <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-300 leading-relaxed animate-on-scroll">
-                Notre équipe d'experts est prête à vous accompagner dans la réalisation de vos ambitions digitales
-            </p>
+            <!-- Illustration -->
+            <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
+                <x-illustrations.mobile-app class="w-full h-auto drop-shadow-2xl" />
+            </div>
         </div>
     </div>
 
@@ -138,11 +145,6 @@
 
             <!-- Right: Contact Info + Illustration -->
             <div class="space-y-8">
-                <!-- Illustration -->
-                <div class="hidden lg:flex justify-center animate-on-scroll opacity-0 translate-x-10">
-                    <x-illustrations.mobile-app class="w-full max-w-md h-auto drop-shadow-2xl" />
-                </div>
-
                 <!-- Contact Cards -->
                 <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-xl p-8 ring-1 ring-gray-200 dark:ring-gray-600 card-3d animate-on-scroll">
                     <div class="mb-8">
