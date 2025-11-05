@@ -160,7 +160,7 @@
                 @foreach($services as $service)
                 <div class="flex flex-col group stagger-child card-3d animate-on-scroll opacity-0 translate-x-10 transition-all duration-700">
                     <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-{{ $service['color'] }}-500 to-{{ $service['color'] }}-600 group-hover:scale-110 transition-transform duration-300">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-genesis group-hover:scale-110 transition-transform duration-300">
                             <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                                 {!! $service['icon'] !!}
                             </svg>

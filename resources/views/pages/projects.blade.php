@@ -55,8 +55,8 @@
             @forelse($projects as $project)
             <!-- Project Card -->
             <a href="{{ route('projects.show', $project) }}" class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
-                <div class="relative h-56 bg-gradient-to-br from-{{ $project->color }}-500 via-{{ $project->color }}-500 to-{{ $project->color }}-600 flex items-center justify-center overflow-hidden p-6">
-                    <div class="absolute inset-0 bg-gradient-to-br from-{{ $project->color }}-500/20 to-{{ $project->color }}-600/20 group-hover:scale-110 transition-transform duration-300"></div>
+                <div class="relative h-56 bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 flex items-center justify-center overflow-hidden p-6">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-700/50 to-gray-900/50 group-hover:scale-110 transition-transform duration-300"></div>
                     <div class="relative w-full h-full flex items-center justify-center">
                         @php
                             $illustrationMap = [
@@ -86,7 +86,7 @@
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-gradient-to-r from-{{ $project->color }}-500 to-{{ $project->color }}-600 text-white rounded-full capitalize">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-gradient-genesis text-white rounded-full capitalize">
                             {{ $project->category }}
                         </span>
                         <span class="text-xs font-medium text-gray-500 dark:text-gray-400">{{ $project->year }}</span>

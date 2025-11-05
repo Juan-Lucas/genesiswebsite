@@ -32,8 +32,7 @@ class Service extends Model
     public function scopePublished($query)
     {
         return $query->whereNotNull('published_at')
-                     ->where('published_at', '<=', now())
-                     ->orderBy('published_at', 'desc');
+                     ->where('published_at', '<=', now());
     }
 
     /**

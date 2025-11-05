@@ -14,6 +14,7 @@ class ServiceSeeder extends Seeder
     {
         $services = [
             [
+                'order' => 1,
                 'title' => 'Vidéographie',
                 'slug' => 'videographie',
                 'description' => 'Production de contenus vidéo professionnels pour valoriser votre marque et captiver votre audience.',
@@ -33,6 +34,7 @@ class ServiceSeeder extends Seeder
                 'published_at' => now(),
             ],
             [
+                'order' => 2,
                 'title' => 'Graphic Design',
                 'slug' => 'graphic-design',
                 'description' => 'Création d\'identités visuelles fortes et de supports graphiques impactants pour votre communication.',
@@ -52,6 +54,7 @@ class ServiceSeeder extends Seeder
                 'published_at' => now(),
             ],
             [
+                'order' => 3,
                 'title' => 'Photography',
                 'slug' => 'photography',
                 'description' => 'Photographies professionnelles pour sublimer votre image et créer des visuels authentiques.',
@@ -71,6 +74,7 @@ class ServiceSeeder extends Seeder
                 'published_at' => now(),
             ],
             [
+                'order' => 4,
                 'title' => 'Architecture',
                 'slug' => 'architecture',
                 'description' => 'Conception architecturale et design d\'espaces créatifs, fonctionnels et esthétiques.',
@@ -90,6 +94,7 @@ class ServiceSeeder extends Seeder
                 'published_at' => now(),
             ],
             [
+                'order' => 5,
                 'title' => 'Conception de Logiciels',
                 'slug' => 'conception-logiciels',
                 'description' => 'Développement de solutions logicielles sur mesure, performantes et évolutives pour votre entreprise.',
@@ -109,6 +114,7 @@ class ServiceSeeder extends Seeder
                 'published_at' => now(),
             ],
             [
+                'order' => 6,
                 'title' => 'Intégration de Progiciels',
                 'slug' => 'integration-progiciels',
                 'description' => 'Déploiement et intégration de progiciels métiers pour optimiser vos processus d\'entreprise.',

@@ -64,7 +64,7 @@ class PageController extends Controller
      */
     public function services(): View
     {
-        $services = Service::published()->get();
+        $services = Service::published()->orderBy('order', 'asc')->get();
         return view('pages.services', compact('services'));
     }
 

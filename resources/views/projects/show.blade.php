@@ -28,8 +28,8 @@
                 <!-- Icon -->
                 <div class="flex justify-center mb-8 animate-on-scroll">
                     <div class="relative inline-flex items-center justify-center">
-                        <div class="absolute inset-0 bg-gradient-to-br from-{{ $project->color }}-500 to-{{ $project->color }}-600 rounded-2xl blur-xl opacity-50"></div>
-                        <div class="relative flex items-center justify-center w-32 h-32 rounded-2xl bg-gradient-to-br from-{{ $project->color }}-500 to-{{ $project->color }}-600">
+                        <div class="absolute inset-0 bg-gradient-genesis rounded-2xl blur-xl opacity-50"></div>
+                        <div class="relative flex items-center justify-center w-32 h-32 rounded-2xl bg-gradient-genesis">
                             <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                                 {!! $project->icon !!}
                             </svg>
@@ -316,8 +316,8 @@
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 stagger-parent">
             @foreach($relatedProjects as $related)
                 <a href="{{ route('projects.show', $related) }}" class="group flex flex-col rounded-2xl bg-white dark:bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300 ring-1 ring-gray-200 dark:ring-gray-700 hover:ring-genesis-blue-500/50 hover:-translate-y-1 overflow-hidden stagger-child card-3d animate-on-scroll">
-                    <div class="relative h-56 bg-gradient-to-br from-{{ $related->color }}-500 via-{{ $related->color }}-500 to-{{ $related->color }}-600 flex items-center justify-center overflow-hidden p-6">
-                        <div class="absolute inset-0 bg-gradient-to-br from-{{ $related->color }}-500/20 to-{{ $related->color }}-600/20 group-hover:scale-110 transition-transform duration-300"></div>
+                    <div class="relative h-56 bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 flex items-center justify-center overflow-hidden p-6">
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-700/50 to-gray-900/50 group-hover:scale-110 transition-transform duration-300"></div>
                         <div class="relative w-full h-full flex items-center justify-center">
                             @php
                                 $illustrationMap = [
