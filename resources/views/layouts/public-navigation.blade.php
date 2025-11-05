@@ -1,30 +1,32 @@
 <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 sticky top-0 z-50 shadow">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between h-24">
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('home') }}" class="flex items-center">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                        <span class="ms-2 text-xl font-bold text-gray-800 dark:text-gray-200">Genesis</span>
+                        <x-application-logo class="block h-20 w-auto" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <a href="{{ route('home') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('home') ? 'border-indigo-400 dark:border-indigo-600' : 'border-transparent' }} text-sm font-medium leading-5 {{ request()->routeIs('home') ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }} hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
+                    <a href="{{ route('home') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('home') ? 'border-sky-400 dark:border-sky-500' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('home') ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }} hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
                         Accueil
                     </a>
-                    <a href="{{ route('services') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('services') ? 'border-indigo-400 dark:border-indigo-600' : 'border-transparent' }} text-sm font-medium leading-5 {{ request()->routeIs('services') ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }} hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
+                    <a href="{{ route('services') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('services') ? 'border-sky-400 dark:border-sky-500' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('services') ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }} hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
                         Services
                     </a>
-                    <a href="{{ route('about') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('about') ? 'border-indigo-400 dark:border-indigo-600' : 'border-transparent' }} text-sm font-medium leading-5 {{ request()->routeIs('about') ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }} hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
+                    <a href="{{ route('about') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('about') ? 'border-sky-400 dark:border-sky-500' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('about') ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }} hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
                         À propos
                     </a>
-                    <a href="{{ route('projects') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('projects') ? 'border-indigo-400 dark:border-indigo-600' : 'border-transparent' }} text-sm font-medium leading-5 {{ request()->routeIs('projects') ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }} hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
+                    <a href="{{ route('projects') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('projects') ? 'border-sky-400 dark:border-sky-500' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('projects') ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }} hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
                         Projets
                     </a>
-                    <a href="{{ route('contact') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('contact') ? 'border-indigo-400 dark:border-indigo-600' : 'border-transparent' }} text-sm font-medium leading-5 {{ request()->routeIs('contact') ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }} hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
+                    <a href="{{ route('blog.index') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('blog.*') ? 'border-sky-400 dark:border-sky-500' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('blog.*') ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }} hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
+                        Blog
+                    </a>
+                    <a href="{{ route('contact') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('contact') ? 'border-sky-400 dark:border-sky-500' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('contact') ? 'text-gray-900 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }} hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 focus:outline-none focus:text-gray-700 dark:focus:text-gray-300 focus:border-gray-300 dark:focus:border-gray-700 transition duration-150 ease-in-out">
                         Contact
                     </a>
                 </div>
@@ -43,14 +45,14 @@
                 </button>
 
                 @auth
-                    <a href="{{ route('dashboard') }}" class="text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                    <a href="{{ route('dashboard') }}" class="inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition duration-150 ease-in-out">
                         Dashboard
                     </a>
                 @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                    <a href="{{ route('login') }}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition duration-150 ease-in-out">
                         Connexion
                     </a>
-                    <a href="{{ route('register') }}" class="ms-4 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                    <a href="{{ route('register') }}" class="ms-3 inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-sky-500 to-cyan-500 rounded-lg hover:from-sky-600 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 shadow-sm transition duration-150 ease-in-out">
                         Inscription
                     </a>
                 @endauth
@@ -92,6 +94,9 @@
             </a>
             <a href="{{ route('projects') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('projects') ? 'border-indigo-400 dark:border-indigo-600 text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-900/50' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out">
                 Projets
+            </a>
+            <a href="{{ route('blog.index') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('blog.*') ? 'border-indigo-400 dark:border-indigo-600 text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-900/50' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out">
+                Blog
             </a>
             <a href="{{ route('contact') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('contact') ? 'border-indigo-400 dark:border-indigo-600 text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-900/50' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 focus:border-gray-300 dark:focus:border-gray-600 transition duration-150 ease-in-out">
                 Contact

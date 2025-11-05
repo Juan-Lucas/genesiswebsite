@@ -4,38 +4,42 @@
             <!-- Company Info -->
             <div class="col-span-1 md:col-span-1">
                 <div class="flex items-center mb-4">
-                    <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                    <span class="ms-2 text-xl font-bold text-gray-800 dark:text-gray-200">Genesis</span>
+                    <x-application-logo class="block h-20 w-auto" />
                 </div>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                <p class="text-gray-600 dark:text-gray-400 text-base">
                     Solutions innovantes pour votre transformation digitale.
                 </p>
             </div>
 
             <!-- Quick Links -->
             <div>
-                <h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase mb-4">
+                <h3 class="text-base font-semibold text-gray-900 dark:text-white tracking-wider uppercase mb-4">
                     Navigation
                 </h3>
                 <ul class="space-y-2">
                     <li>
-                        <a href="{{ route('home') }}" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-sm">
+                        <a href="{{ route('home') }}" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-base">
                             Accueil
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('services') }}" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-sm">
+                        <a href="{{ route('services') }}" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-base">
                             Services
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('about') }}" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-sm">
+                        <a href="{{ route('about') }}" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-base">
                             À propos
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('projects') }}" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-sm">
+                        <a href="{{ route('projects') }}" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-base">
                             Projets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('blog.index') }}" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-base">
+                            Blog
                         </a>
                     </li>
                 </ul>
@@ -43,32 +47,32 @@
 
             <!-- Services -->
             <div>
-                <h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase mb-4">
+                <h3 class="text-base font-semibold text-gray-900 dark:text-white tracking-wider uppercase mb-4">
                     Services
                 </h3>
                 <ul class="space-y-2">
-                    <li class="text-gray-600 dark:text-gray-400 text-sm">Développement Web</li>
-                    <li class="text-gray-600 dark:text-gray-400 text-sm">Applications Mobile</li>
-                    <li class="text-gray-600 dark:text-gray-400 text-sm">Cloud Solutions</li>
-                    <li class="text-gray-600 dark:text-gray-400 text-sm">Consulting IT</li>
+                    <li class="text-gray-600 dark:text-gray-400 text-base">Développement Web</li>
+                    <li class="text-gray-600 dark:text-gray-400 text-base">Applications Mobile</li>
+                    <li class="text-gray-600 dark:text-gray-400 text-base">Cloud Solutions</li>
+                    <li class="text-gray-600 dark:text-gray-400 text-base">Consulting IT</li>
                 </ul>
             </div>
 
             <!-- Contact -->
             <div>
-                <h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase mb-4">
+                <h3 class="text-base font-semibold text-gray-900 dark:text-white tracking-wider uppercase mb-4">
                     Contact
                 </h3>
                 <ul class="space-y-2">
                     <li>
-                        <a href="{{ route('contact') }}" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-sm">
+                        <a href="{{ route('contact') }}" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-base">
                             Nous contacter
                         </a>
                     </li>
-                    <li class="text-gray-600 dark:text-gray-400 text-sm">
+                    <li class="text-gray-600 dark:text-gray-400 text-base">
                         info@genesis.com
                     </li>
-                    <li class="text-gray-600 dark:text-gray-400 text-sm">
+                    <li class="text-gray-600 dark:text-gray-400 text-base">
                         +33 1 23 45 67 89
                     </li>
                 </ul>
