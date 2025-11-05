@@ -11,7 +11,7 @@
         <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-genesis-purple-600/20 rounded-full blur-3xl parallax-fast float-animation" data-speed="0.5"></div>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="text-center lg:text-left">
                 <!-- Badge -->

@@ -6,6 +6,10 @@ use App\Models\Service;
 use Illuminate\View\View;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Validator;
 
 class PageController extends Controller
 {
@@ -78,6 +82,56 @@ class PageController extends Controller
     public function contact(): View
     {
         return view('pages.contact');
+    }
+
+    /**
+     * Store a contact form submission.
+     */
+    public function storeContact(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'nullable|string|max:20',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string|max:5000',
+        ], [
+            'name.required' => 'Le nom est requis.',
+            'name.max' => 'Le nom ne doit pas dépasser 255 caractères.',
+            'email.required' => 'L\'adresse email est requise.',
+            'email.email' => 'L\'adresse email doit être valide.',
+            'email.max' => 'L\'adresse email ne doit pas dépasser 255 caractères.',
+            'phone.max' => 'Le numéro de téléphone ne doit pas dépasser 20 caractères.',
+            'subject.required' => 'Le sujet est requis.',
+            'subject.max' => 'Le sujet ne doit pas dépasser 255 caractères.',
+            'message.required' => 'Le message est requis.',
+            'message.max' => 'Le message ne doit pas dépasser 5000 caractères.',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        try {
+            $contactData = [
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'subject' => $request->subject,
+                'message' => $request->message,
+            ];
+
+            // Send email
+            Mail::to(config('mail.from.address'))->send(new ContactMail($contactData));
+
+            return redirect()->back()->with('success', 'Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
+        } catch (\Exception $e) {
+            return redirect()->back()
+                ->with('error', 'Une erreur est survenue lors de l\'envoi de votre message. Veuillez réessayer plus tard.')
+                ->withInput();
+        }
     }
 
     /**

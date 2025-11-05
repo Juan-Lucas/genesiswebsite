@@ -6,14 +6,17 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             <!-- Company Info -->
             <div class="col-span-1 md:col-span-2 lg:col-span-1">
-                <div class="flex items-center mb-4">
+                <div class="flex items-center mb-2">
                     <x-application-logo class="block h-28 w-auto" />
                 </div>
-                <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-6">
+                <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-3">
                     Solutions innovantes pour votre transformation digitale.
                 </p>
+                <p class="text-sm text-gray-500 dark:text-gray-500 italic">
+                    Votre partenaire de confiance depuis 2020
+                </p>
                 <!-- Social Media Icons -->
-                <div class="flex space-x-4">
+                <div class="flex space-x-4 mt-6">
                     <a href="https://www.facebook.com/share/1GXxw6s6TK/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
                         <span class="sr-only">Facebook</span>
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">

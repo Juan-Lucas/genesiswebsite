@@ -37,7 +37,7 @@
 
             <!-- Illustration -->
             <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
-                <x-illustrations.article-news class="w-full h-auto drop-shadow-2xl" />
+                <x-illustrations.blog-article class="w-full max-w-md h-auto drop-shadow-2xl" />
             </div>
         </div>
     </div>
@@ -101,15 +101,17 @@
                                             'actualités' => 'article-news',
                                             'actualites' => 'article-news',
                                             'news' => 'article-news',
-                                            'technologie' => 'article-blog',
-                                            'technology' => 'article-blog',
+                                            'technologie' => 'article-tech',
+                                            'technology' => 'article-tech',
+                                            'tech' => 'article-tech',
                                             'développement' => 'article-blog',
                                             'développement web' => 'article-blog',
+                                            'developpement' => 'article-blog',
                                             'web' => 'article-blog',
                                             'mobile' => 'article-blog',
                                             'design' => 'article-blog',
-                                            'marketing' => 'article-news',
-                                            'business' => 'article-news',
+                                            'marketing' => 'article-marketing',
+                                            'business' => 'article-business',
                                         ];
                                         $category = strtolower($article->category);
                                         $illustration = $illustrationMap[$category] ?? 'article-blog';

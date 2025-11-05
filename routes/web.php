@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -19,11 +20,15 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/projets', [ProjectController::class, 'index'])->name('projects');
 Route::get('/projets/{project}', [ProjectController::class, 'show'])->name('projects.show');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::post('/contact', [PageController::class, 'storeContact'])->name('contact.store');
 Route::get('/brochure/download', [PageController::class, 'downloadBrochure'])->name('brochure.download');
 
 // Blog routes
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{article}', [BlogController::class, 'show'])->name('blog.show');
+
+// Newsletter subscription
+Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

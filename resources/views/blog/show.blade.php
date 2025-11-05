@@ -263,12 +263,34 @@
                             <img src="{{ asset($related->image) }}" alt="{{ $related->title }}" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                     @else
-                        <div class="aspect-[16/9] w-full bg-gradient-to-br from-sky-500 to-cyan-500 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <svg class="w-16 h-16 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                </svg>
+                        <div class="relative aspect-[16/9] w-full bg-gradient-to-br from-sky-500 via-cyan-500 to-blue-600 overflow-hidden flex items-center justify-center p-8">
+                            <div class="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-blue-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="relative w-full max-w-[240px] mx-auto">
+                                @php
+                                    $illustrationMap = [
+                                        'actualités' => 'article-news',
+                                        'actualites' => 'article-news',
+                                        'news' => 'article-news',
+                                        'technologie' => 'article-tech',
+                                        'technology' => 'article-tech',
+                                        'tech' => 'article-tech',
+                                        'développement' => 'article-blog',
+                                        'développement web' => 'article-blog',
+                                        'developpement' => 'article-blog',
+                                        'web' => 'article-blog',
+                                        'mobile' => 'article-blog',
+                                        'design' => 'article-blog',
+                                        'marketing' => 'article-marketing',
+                                        'business' => 'article-business',
+                                        'vidéographie' => 'article-blog',
+                                        'videographie' => 'article-blog',
+                                        'photographie' => 'article-blog',
+                                        'architecture' => 'article-blog',
+                                    ];
+                                    $category = strtolower($related->category);
+                                    $illustration = $illustrationMap[$category] ?? 'article-blog';
+                                @endphp
+                                <x-dynamic-component :component="'illustrations.' . $illustration" class="w-full h-auto drop-shadow-2xl opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
                             </div>
                         </div>
                     @endif
@@ -328,11 +350,45 @@
                 Recevez nos meilleurs articles et conseils directement dans votre boîte mail.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input type="email" placeholder="votre@email.com" class="flex-1 px-6 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent">
-                <button class="px-8 py-3 rounded-lg bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-semibold hover:from-sky-600 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-lg hover:shadow-xl transition-all duration-300">
-                    S'abonner
-                </button>
+                <form action="{{ route('newsletter.subscribe') }}" method="POST" class="flex flex-col sm:flex-row gap-4 w-full">
+                    @csrf
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="votre@email.com"
+                        required
+                        class="flex-1 px-6 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                    >
+                    <button
+                        type="submit"
+                        class="px-8 py-3 rounded-lg bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-semibold hover:from-sky-600 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-900 shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap"
+                    >
+                        S'abonner
+                    </button>
+                </form>
             </div>
+
+            @if(session('newsletter_success'))
+                <div class="mt-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg max-w-md mx-auto">
+                    <p class="text-green-100 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        {{ session('newsletter_success') }}
+                    </p>
+                </div>
+            @endif
+
+            @if(session('newsletter_error'))
+                <div class="mt-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg max-w-md mx-auto">
+                    <p class="text-red-100 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        {{ session('newsletter_error') }}
+                    </p>
+                </div>
+            @endif
         </div>
     </div>
 </div>

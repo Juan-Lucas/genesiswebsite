@@ -18,19 +18,19 @@
         currentSlide: 0,
         slides: [
             {
-                badge: 'Découvrez nos dernières innovations',
+                badge: 'Bienvenue chez Genesis',
                 title: 'Transformez votre vision en réalité digitale',
-                description: 'Nous créons des solutions web et mobile innovantes qui propulsent votre entreprise vers le succès. De l\'idée au déploiement, Genesis est votre partenaire technologique.'
+                description: 'Genesis crée des solutions web et mobile innovantes qui propulsent votre entreprise vers le succès. De l\'idée au déploiement, nous sommes votre partenaire technologique de confiance.'
             },
             {
-                badge: 'Excellence & Innovation',
+                badge: 'Genesis - Excellence & Innovation',
                 title: 'Des solutions sur mesure pour votre entreprise',
-                description: 'Expertise en développement web, applications mobile et cloud. Nous concevons des produits digitaux performants qui répondent à vos besoins spécifiques.'
+                description: 'Genesis combine expertise en développement web, applications mobile et cloud pour concevoir des produits digitaux performants qui répondent à vos besoins spécifiques.'
             },
             {
-                badge: 'Accompagnement complet',
+                badge: 'Genesis - Votre partenaire digital',
                 title: 'Votre succès est notre priorité',
-                description: 'De la stratégie au déploiement, notre équipe vous accompagne à chaque étape pour garantir la réussite de votre projet digital.'
+                description: 'De la stratégie au déploiement, l\'équipe Genesis vous accompagne à chaque étape pour garantir la réussite de votre transformation digitale.'
             }
         ],
         autoplay: null,

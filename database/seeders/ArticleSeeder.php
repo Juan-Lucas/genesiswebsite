@@ -19,8 +19,8 @@ class ArticleSeeder extends Seeder
 
         if (!$author) {
             $author = User::create([
-                'name' => 'Genesis Team',
-                'email' => 'team@genesis.com',
+                'name' => 'Genesis Admin',
+                'email' => 'admin@genesis.com',
                 'password' => bcrypt('password'),
             ]);
         }

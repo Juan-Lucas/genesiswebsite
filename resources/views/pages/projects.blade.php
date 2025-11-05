@@ -35,7 +35,7 @@
 
             <!-- Illustration -->
             <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
-                <x-illustrations.web-design class="w-full h-auto drop-shadow-2xl" />
+                <x-illustrations.project-showcase class="w-full h-auto drop-shadow-2xl" />
             </div>
         </div>
     </div>
@@ -55,9 +55,9 @@
             @forelse($projects as $project)
             <!-- Project Card -->
             <a href="{{ route('projects.show', $project) }}" class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
-                <div class="relative h-56 bg-gradient-to-br from-{{ $project->color }}-500 via-{{ $project->color }}-500 to-{{ $project->color }}-600 flex items-center justify-center overflow-hidden p-8">
+                <div class="relative h-56 bg-gradient-to-br from-{{ $project->color }}-500 via-{{ $project->color }}-500 to-{{ $project->color }}-600 flex items-center justify-center overflow-hidden p-6">
                     <div class="absolute inset-0 bg-gradient-to-br from-{{ $project->color }}-500/20 to-{{ $project->color }}-600/20 group-hover:scale-110 transition-transform duration-300"></div>
-                    <div class="relative w-full max-w-[280px] mx-auto">
+                    <div class="relative w-full h-full flex items-center justify-center">
                         @php
                             $illustrationMap = [
                                 'photographie' => 'project-photo',
@@ -69,19 +69,19 @@
                                 'design' => 'project-design',
                                 'graphisme' => 'project-design',
                                 'architecture' => 'project-architecture',
-                                'logiciels' => 'project-software',
-                                'logiciel' => 'project-software',
-                                'software' => 'project-software',
-                                'web' => 'project-software',
-                                'mobile' => 'project-software',
+                                'logiciels' => 'project-web',
+                                'logiciel' => 'project-web',
+                                'software' => 'project-web',
+                                'web' => 'project-web',
+                                'mobile' => 'project-mobile',
                                 'integration' => 'project-integration',
                                 'intégration' => 'project-integration',
                                 'api' => 'project-integration',
                             ];
                             $category = strtolower($project->category);
-                            $illustration = $illustrationMap[$category] ?? 'project-software';
+                            $illustration = $illustrationMap[$category] ?? 'project-web';
                         @endphp
-                        <x-dynamic-component :component="'illustrations.' . $illustration" class="w-full h-auto drop-shadow-xl opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" />
+                        <x-dynamic-component :component="'illustrations.' . $illustration" class="w-full h-full max-w-[200px] max-h-[180px] opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" />
                     </div>
                 </div>
                 <div class="p-6">

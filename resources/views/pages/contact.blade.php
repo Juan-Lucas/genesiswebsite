@@ -71,14 +71,42 @@
                 <form method="POST" action="{{ route('contact') }}" class="space-y-6">
                     @csrf
 
+                    <!-- Success Message -->
+                    @if(session('success'))
+                    <div class="bg-green-500/20 border-2 border-green-500/50 rounded-xl p-4 flex items-start gap-3 animate-on-scroll">
+                        <svg class="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <p class="text-green-100 font-medium">{{ session('success') }}</p>
+                    </div>
+                    @endif
+
+                    <!-- Error Message -->
+                    @if(session('error'))
+                    <div class="bg-red-500/20 border-2 border-red-500/50 rounded-xl p-4 flex items-start gap-3 animate-on-scroll">
+                        <svg class="h-6 w-6 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <p class="text-red-100 font-medium">{{ session('error') }}</p>
+                    </div>
+                    @endif
+
                     <!-- Name -->
                     <div>
                         <label for="name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                             Nom complet <span class="text-red-500">*</span>
                         </label>
-                        <input type="text" name="name" id="name" required
-                            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-genesis-blue-500 focus:border-genesis-blue-500 transition-all duration-300"
+                        <input type="text" name="name" id="name" required value="{{ old('name') }}"
+                            class="w-full px-4 py-3 rounded-xl border-2 @error('name') border-red-500 @else border-gray-200 dark:border-gray-600 @enderror bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-genesis-blue-500 focus:border-genesis-blue-500 transition-all duration-300"
                             placeholder="Jean Dupont">
+                        @error('name')
+                        <p class="mt-2 text-sm text-red-500 flex items-center gap-1">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            {{ $message }}
+                        </p>
+                        @enderror
                     </div>
 
                     <!-- Email -->
@@ -86,9 +114,17 @@
                         <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                             Email <span class="text-red-500">*</span>
                         </label>
-                        <input type="email" name="email" id="email" required
-                            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-genesis-blue-500 focus:border-genesis-blue-500 transition-all duration-300"
+                        <input type="email" name="email" id="email" required value="{{ old('email') }}"
+                            class="w-full px-4 py-3 rounded-xl border-2 @error('email') border-red-500 @else border-gray-200 dark:border-gray-600 @enderror bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-genesis-blue-500 focus:border-genesis-blue-500 transition-all duration-300"
                             placeholder="jean.dupont@example.com">
+                        @error('email')
+                        <p class="mt-2 text-sm text-red-500 flex items-center gap-1">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            {{ $message }}
+                        </p>
+                        @enderror
                     </div>
 
                     <!-- Phone -->
@@ -96,9 +132,17 @@
                         <label for="phone" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                             Téléphone <span class="text-gray-400 text-xs">(optionnel)</span>
                         </label>
-                        <input type="tel" name="phone" id="phone"
-                            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-genesis-blue-500 focus:border-genesis-blue-500 transition-all duration-300"
+                        <input type="tel" name="phone" id="phone" value="{{ old('phone') }}"
+                            class="w-full px-4 py-3 rounded-xl border-2 @error('phone') border-red-500 @else border-gray-200 dark:border-gray-600 @enderror bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-genesis-blue-500 focus:border-genesis-blue-500 transition-all duration-300"
                             placeholder="+33 1 23 45 67 89">
+                        @error('phone')
+                        <p class="mt-2 text-sm text-red-500 flex items-center gap-1">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            {{ $message }}
+                        </p>
+                        @enderror
                     </div>
 
                     <!-- Subject -->
@@ -107,14 +151,22 @@
                             Sujet <span class="text-red-500">*</span>
                         </label>
                         <select name="subject" id="subject" required
-                            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-genesis-blue-500 focus:border-genesis-blue-500 transition-all duration-300">
+                            class="w-full px-4 py-3 rounded-xl border-2 @error('subject') border-red-500 @else border-gray-200 dark:border-gray-600 @enderror bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-genesis-blue-500 focus:border-genesis-blue-500 transition-all duration-300">
                             <option value="" class="text-gray-400">Sélectionnez un sujet</option>
-                            <option value="Nouveau projet">Nouveau projet</option>
-                            <option value="Devis">Demande de devis</option>
-                            <option value="Support">Support technique</option>
-                            <option value="Partenariat">Opportunité de partenariat</option>
-                            <option value="Autre">Autre</option>
+                            <option value="Nouveau projet" {{ old('subject') == 'Nouveau projet' ? 'selected' : '' }}>Nouveau projet</option>
+                            <option value="Devis" {{ old('subject') == 'Devis' ? 'selected' : '' }}>Demande de devis</option>
+                            <option value="Support" {{ old('subject') == 'Support' ? 'selected' : '' }}>Support technique</option>
+                            <option value="Partenariat" {{ old('subject') == 'Partenariat' ? 'selected' : '' }}>Opportunité de partenariat</option>
+                            <option value="Autre" {{ old('subject') == 'Autre' ? 'selected' : '' }}>Autre</option>
                         </select>
+                        @error('subject')
+                        <p class="mt-2 text-sm text-red-500 flex items-center gap-1">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            {{ $message }}
+                        </p>
+                        @enderror
                     </div>
 
                     <!-- Message -->
@@ -123,8 +175,16 @@
                             Message <span class="text-red-500">*</span>
                         </label>
                         <textarea name="message" id="message" rows="6" required
-                            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-genesis-blue-500 focus:border-genesis-blue-500 transition-all duration-300 resize-none"
-                            placeholder="Décrivez votre projet ou votre question en détail..."></textarea>
+                            class="w-full px-4 py-3 rounded-xl border-2 @error('message') border-red-500 @else border-gray-200 dark:border-gray-600 @enderror bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-genesis-blue-500 focus:border-genesis-blue-500 transition-all duration-300 resize-none"
+                            placeholder="Décrivez votre projet ou votre question en détail...">{{ old('message') }}</textarea>
+                        @error('message')
+                        <p class="mt-2 text-sm text-red-500 flex items-center gap-1">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            {{ $message }}
+                        </p>
+                        @enderror
                     </div>
 
                     <!-- Submit Button -->

@@ -12,22 +12,30 @@
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-        <div class="text-center">
-            <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700 mb-8 pulse-glow shimmer animate-on-scroll">
-                <svg class="h-4 w-4 text-genesis-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-sm font-medium text-white dark:text-gray-200">Votre partenaire de confiance</span>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Contenu texte -->
+            <div class="text-center lg:text-left">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700 mb-8 pulse-glow shimmer animate-on-scroll">
+                    <svg class="h-4 w-4 text-genesis-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-sm font-medium text-white dark:text-gray-200">Votre partenaire de confiance</span>
+                </div>
+
+                <!-- Title -->
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight animate-on-scroll">
+                    À propos de <span class="bg-gradient-genesis bg-clip-text text-transparent">Genesis</span>
+                </h1>
+                <p class="mt-6 text-xl md:text-2xl text-gray-300 dark:text-gray-400 max-w-3xl lg:max-w-none leading-relaxed animate-on-scroll">
+                    Votre partenaire de confiance pour l'innovation digitale depuis 2020
+                </p>
             </div>
 
-            <!-- Title -->
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight animate-on-scroll">
-                À propos de <span class="bg-gradient-genesis bg-clip-text text-transparent">Genesis</span>
-            </h1>
-            <p class="mt-6 text-xl md:text-2xl text-gray-300 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed animate-on-scroll">
-                Votre partenaire de confiance pour l'innovation digitale depuis 2020
-            </p>
+            <!-- Illustration -->
+            <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
+                <x-illustrations.team-collaboration class="w-full max-w-md h-auto drop-shadow-2xl opacity-90" />
+            </div>
         </div>
     </div>
 
