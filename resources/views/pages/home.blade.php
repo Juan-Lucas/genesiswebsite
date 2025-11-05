@@ -7,11 +7,11 @@
 <div class="bg-gradient-to-b from-gray-900 via-gray-900 to-white dark:to-gray-900 relative isolate overflow-hidden">
     <!-- Decorative Background Elements -->
     <div aria-hidden="true" class="absolute inset-0 -z-10">
-        <div class="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-sky-500/10 via-transparent to-transparent parallax-slow" data-speed="0.3"></div>
+        <div class="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-genesis-blue-500/10 via-transparent to-transparent parallax-slow" data-speed="0.3"></div>
         <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-             class="absolute left-[calc(50%-15rem)] top-0 aspect-[1155/678] w-[50rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-sky-400 to-cyan-400 opacity-20 blur-3xl sm:left-[calc(50%-30rem)] sm:w-[72rem] parallax-fast float-animation" data-speed="0.5"></div>
+             class="absolute left-[calc(50%-15rem)] top-0 aspect-[1155/678] w-[50rem] -translate-x-1/2 rotate-[30deg] bg-gradient-genesis opacity-20 blur-3xl sm:left-[calc(50%-30rem)] sm:w-[72rem] parallax-fast float-animation" data-speed="0.5"></div>
         <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-             class="absolute right-[calc(50%-15rem)] top-20 aspect-[1155/678] w-[40rem] translate-x-1/2 rotate-[-30deg] bg-gradient-to-tr from-cyan-400 to-sky-400 opacity-15 blur-3xl sm:right-[calc(50%-20rem)] sm:w-[60rem] parallax-fast float-animation" data-speed="0.6"></div>
+             class="absolute right-[calc(50%-15rem)] top-20 aspect-[1155/678] w-[40rem] translate-x-1/2 rotate-[-30deg] bg-gradient-genesis opacity-15 blur-3xl sm:right-[calc(50%-20rem)] sm:w-[60rem] parallax-fast float-animation" data-speed="0.6"></div>
     </div>
 
     <div class="relative px-6 pt-8 lg:px-8" x-data="{
@@ -56,7 +56,7 @@
             <div class="hidden sm:mb-8 sm:flex sm:justify-center animate-on-scroll">
                 <div class="relative rounded-full px-4 py-1.5 text-sm leading-6 text-gray-300 ring-1 ring-white/10 hover:ring-white/20 backdrop-blur-sm transition-all duration-300 bg-white/5 pulse-glow shimmer">
                     <span x-text="slides[currentSlide].badge"></span>
-                    <a href="{{ route('projects') }}" class="font-semibold text-sky-400 ml-1 hover:text-sky-300 transition-colors">
+                    <a href="{{ route('projects') }}" class="font-semibold text-genesis-blue-500 ml-1 hover:text-genesis-blue-400 transition-colors">
                         <span aria-hidden="true" class="absolute inset-0"></span>
                         En savoir plus <span aria-hidden="true">→</span>
                     </a>
@@ -87,7 +87,7 @@
 
                 <!-- Slider Controls -->
                 <div class="mt-16 flex items-center justify-center gap-x-6">
-                    <a href="{{ route('services') }}" class="rounded-lg bg-gradient-to-r from-sky-500 to-cyan-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg hover:from-sky-600 hover:to-cyan-600 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 transition-all duration-300">
+                    <a href="{{ route('services') }}" class="rounded-lg bg-gradient-genesis px-6 py-3.5 text-base font-semibold text-white shadow-lg hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-genesis-blue-500 transition-all duration-300">
                         Découvrir nos services
                     </a>
                     <a href="{{ route('contact') }}" class="text-base font-semibold text-white hover:text-gray-300 transition-colors duration-300 flex items-center gap-2">
@@ -102,7 +102,7 @@
                 <div class="mt-12 flex justify-center gap-2">
                     <template x-for="(slide, index) in slides" :key="index">
                         <button @click="goTo(index)"
-                                :class="currentSlide === index ? 'bg-sky-500 w-8' : 'bg-white/30 w-2 hover:bg-white/50'"
+                                :class="currentSlide === index ? 'bg-genesis-blue-500 w-8' : 'bg-white/30 w-2 hover:bg-white/50'"
                                 class="h-2 rounded-full transition-all duration-300">
                         </button>
                     </template>
@@ -135,10 +135,10 @@
     <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent"></div>
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="text-base font-semibold leading-7 text-sky-500 flex items-center justify-center gap-2">
-                <div class="w-8 h-px bg-gradient-to-r from-transparent to-sky-500"></div>
+            <h2 class="text-base font-semibold leading-7 text-genesis-blue-500 flex items-center justify-center gap-2">
+                <div class="w-8 h-px bg-gradient-to-r from-transparent to-genesis-blue-500"></div>
                 Nos Services
-                <div class="w-8 h-px bg-gradient-to-l from-transparent to-sky-500"></div>
+                <div class="w-8 h-px bg-gradient-to-l from-transparent to-genesis-blue-500"></div>
             </h2>
             <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
                 Des solutions complètes pour votre entreprise
@@ -196,7 +196,7 @@
 
 <!-- Stats Section -->
 <div class="bg-gray-900 py-16 sm:py-20 relative">
-    <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-500/0 via-sky-500/50 to-cyan-500/0"></div>
+    <div class="absolute inset-x-0 top-0 h-1 bg-gradient-genesis opacity-50"></div>
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:max-w-none">
             <div class="text-center">
@@ -208,28 +208,28 @@
                 </p>
             </div>
             <dl class="mt-16 grid grid-cols-1 gap-6 overflow-hidden text-center sm:grid-cols-2 lg:grid-cols-4">
-                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
+                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-genesis-blue-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
                     <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Projets réalisés</dt>
                     <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">
-                        <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent" data-count="50">0</span>+
+                        <span class="bg-gradient-genesis bg-clip-text text-transparent" data-count="50">0</span>+
                     </dd>
                 </div>
-                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
+                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-genesis-blue-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
                     <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Clients satisfaits</dt>
                     <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">
-                        <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent" data-count="100">0</span>%
+                        <span class="bg-gradient-genesis bg-clip-text text-transparent" data-count="100">0</span>%
                     </dd>
                 </div>
-                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
+                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-genesis-blue-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
                     <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Années d'expérience</dt>
                     <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">
-                        <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent" data-count="5">0</span>+
+                        <span class="bg-gradient-genesis bg-clip-text text-transparent" data-count="5">0</span>+
                     </dd>
                 </div>
-                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
+                <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-genesis-blue-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
                     <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Technologies maîtrisées</dt>
                     <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">
-                        <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent" data-count="20">0</span>+
+                        <span class="bg-gradient-genesis bg-clip-text text-transparent" data-count="20">0</span>+
                     </dd>
                 </div>
             </dl>
@@ -242,10 +242,10 @@
     <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent"></div>
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="text-base font-semibold leading-7 text-sky-500 flex items-center justify-center gap-2">
-                <div class="w-8 h-px bg-gradient-to-r from-transparent to-sky-500"></div>
+            <h2 class="text-base font-semibold leading-7 text-genesis-blue-500 flex items-center justify-center gap-2">
+                <div class="w-8 h-px bg-gradient-to-r from-transparent to-genesis-blue-500"></div>
                 Notre Processus
-                <div class="w-8 h-px bg-gradient-to-l from-transparent to-sky-500"></div>
+                <div class="w-8 h-px bg-gradient-to-l from-transparent to-genesis-blue-500"></div>
             </h2>
             <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
                 Comment nous travaillons
@@ -312,17 +312,17 @@
 
 <!-- Testimonial Section -->
 <div class="bg-gray-900 py-16 sm:py-20 relative">
-    <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-500/0 via-sky-500/50 to-cyan-500/0"></div>
+    <div class="absolute inset-x-0 top-0 h-1 bg-gradient-genesis opacity-50"></div>
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-xl text-center">
-            <h2 class="text-lg font-semibold leading-8 tracking-tight text-sky-400">Témoignages</h2>
+            <h2 class="text-lg font-semibold leading-8 tracking-tight text-genesis-blue-400">Témoignages</h2>
             <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Ce que disent nos clients
             </p>
         </div>
         <div class="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none stagger-parent">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                <div class="rounded-2xl bg-white/5 backdrop-blur-sm p-8 ring-1 ring-white/10 hover:bg-white/10 hover:ring-sky-500/50 transition-all duration-300 group stagger-child card-3d animate-on-scroll opacity-0 translate-y-10 hover:scale-105">
+                <div class="rounded-2xl bg-white/5 backdrop-blur-sm p-8 ring-1 ring-white/10 hover:bg-white/10 hover:ring-genesis-blue-500/50 transition-all duration-300 group stagger-child card-3d animate-on-scroll opacity-0 translate-y-10 hover:scale-105">
                     <figure class="flex flex-col justify-between h-full">
                         <div>
                             <div class="flex gap-1 mb-4">
@@ -347,7 +347,7 @@
                             </blockquote>
                         </div>
                         <figcaption class="mt-6 flex items-center gap-x-4">
-                            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-sky-400 to-cyan-400 flex items-center justify-center text-white font-bold text-lg ring-2 ring-white/20 group-hover:scale-110 transition-transform">M</div>
+                            <div class="h-12 w-12 rounded-full bg-gradient-genesis flex items-center justify-center text-white font-bold text-lg ring-2 ring-white/20 group-hover:scale-110 transition-transform">M</div>
                             <div>
                                 <div class="font-semibold text-white">Marie Dubois</div>
                                 <div class="text-sm text-gray-400">CEO, TechCorp</div>
@@ -380,7 +380,7 @@
                             </blockquote>
                         </div>
                         <figcaption class="mt-6 flex items-center gap-x-4">
-                            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-sky-400 to-cyan-400 flex items-center justify-center text-white font-bold text-lg ring-2 ring-white/20 group-hover:scale-110 transition-transform">J</div>
+                            <div class="h-12 w-12 rounded-full bg-gradient-genesis flex items-center justify-center text-white font-bold text-lg ring-2 ring-white/20 group-hover:scale-110 transition-transform">J</div>
                             <div>
                                 <div class="font-semibold text-white">Jean Martin</div>
                                 <div class="text-sm text-gray-400">Directeur, InnovateCo</div>
@@ -413,7 +413,7 @@
                             </blockquote>
                         </div>
                         <figcaption class="mt-6 flex items-center gap-x-4">
-                            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-sky-400 to-cyan-400 flex items-center justify-center text-white font-bold text-lg ring-2 ring-white/20 group-hover:scale-110 transition-transform">S</div>
+                            <div class="h-12 w-12 rounded-full bg-gradient-genesis flex items-center justify-center text-white font-bold text-lg ring-2 ring-white/20 group-hover:scale-110 transition-transform">S</div>
                             <div>
                                 <div class="font-semibold text-white">Sophie Laurent</div>
                                 <div class="text-sm text-gray-400">Fondatrice, StartupHub</div>
@@ -438,13 +438,13 @@
                 Contactez-nous dès aujourd'hui pour discuter de vos besoins et obtenir un devis personnalisé.
             </p>
             <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-sky-500 to-cyan-500 px-8 py-3.5 text-base font-semibold text-white shadow-lg hover:from-sky-600 hover:to-cyan-600 hover:shadow-xl transition-all duration-300">
+                <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 rounded-lg bg-gradient-genesis px-8 py-3.5 text-base font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
                     </svg>
                     Nous contacter
                 </a>
-                <a href="{{ route('projects') }}" class="inline-flex items-center gap-2 text-base font-semibold leading-6 text-gray-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition-colors duration-300 px-6 py-3">
+                <a href="{{ route('projects') }}" class="inline-flex items-center gap-2 text-base font-semibold leading-6 text-gray-900 dark:text-white hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 transition-colors duration-300 px-6 py-3">
                     Voir nos projets
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>

@@ -1,6 +1,6 @@
 <footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 relative">
     <!-- Decorative gradient border -->
-    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-500/50 to-transparent"></div>
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-genesis opacity-50"></div>
 
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -14,7 +14,7 @@
                 </p>
                 <!-- Social Media Icons -->
                 <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-sky-500 dark:hover:text-sky-400 transition-colors duration-300">
+                    <a href="#" class="text-gray-400 hover:text-genesis-blue-500 dark:hover:text-genesis-blue-400 transition-colors duration-300">
                         <span class="sr-only">LinkedIn</span>
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
@@ -38,12 +38,12 @@
             <!-- Quick Links -->
             <div>
                 <h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase mb-4 flex items-center gap-2">
-                    <div class="w-1 h-4 bg-gradient-to-b from-sky-500 to-cyan-500 rounded-full"></div>
+                    <div class="w-1 h-4 bg-gradient-genesis rounded-full"></div>
                     Navigation
                 </h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="{{ route('home') }}" class="text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-400 text-base transition-colors duration-300 flex items-center group">
+                        <a href="{{ route('home') }}" class="text-gray-600 dark:text-gray-400 hover:text-genesis-blue-500 dark:hover:text-genesis-blue-400 text-base transition-colors duration-300 flex items-center group">
                             <svg class="w-4 h-4 mr-2 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                             </svg>
@@ -88,7 +88,7 @@
             <!-- Services -->
             <div>
                 <h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase mb-4 flex items-center gap-2">
-                    <div class="w-1 h-4 bg-gradient-to-b from-sky-500 to-cyan-500 rounded-full"></div>
+                    <div class="w-1 h-4 bg-gradient-genesis rounded-full"></div>
                     Services
                 </h3>
                 <ul class="space-y-3">
@@ -122,13 +122,13 @@
             <!-- Contact -->
             <div>
                 <h3 class="text-sm font-semibold text-gray-900 dark:text-white tracking-wider uppercase mb-4 flex items-center gap-2">
-                    <div class="w-1 h-4 bg-gradient-to-b from-sky-500 to-cyan-500 rounded-full"></div>
+                    <div class="w-1 h-4 bg-gradient-genesis rounded-full"></div>
                     Contact
                 </h3>
                 <ul class="space-y-3">
                     <li>
-                        <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-400 text-base transition-colors duration-300 group">
-                            <svg class="w-5 h-5 text-sky-500/50 group-hover:text-sky-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-genesis-blue-500 dark:hover:text-genesis-blue-400 text-base transition-colors duration-300 group">
+                            <svg class="w-5 h-5 text-genesis-blue-500/50 group-hover:text-genesis-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
                             </svg>
                             Nous contacter
@@ -157,7 +157,7 @@
                     &copy; {{ date('Y') }} Genesis. Tous droits réservés.
                 </p>
                 <div class="flex gap-6 text-sm">
-                    <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-400 transition-colors duration-300">
+                    <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-genesis-blue-500 dark:hover:text-genesis-blue-400 transition-colors duration-300">
                         Politique de confidentialité
                     </a>
                     <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-400 transition-colors duration-300">

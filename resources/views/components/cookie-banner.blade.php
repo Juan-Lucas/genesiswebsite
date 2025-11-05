@@ -18,7 +18,7 @@
             <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
                 <!-- Cookie Icon -->
                 <div class="flex-shrink-0">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-500 flex items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-genesis flex items-center justify-center shadow-lg">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
@@ -32,7 +32,7 @@
                     </h3>
                     <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                         {{ __('messages.cookies.description') }}
-                        <a href="#" class="text-sky-500 hover:text-sky-600 dark:text-sky-400 dark:hover:text-sky-300 font-medium underline ml-1">
+                        <a href="#" class="text-genesis-blue-500 hover:text-genesis-blue-600 dark:text-genesis-blue-400 dark:hover:text-genesis-blue-300 font-medium underline ml-1">
                             {{ __('messages.cookies.learn_more') }}
                         </a>
                     </p>
@@ -45,7 +45,7 @@
                         {{ __('messages.cookies.decline') }}
                     </button>
                     <button @click="localStorage.setItem('cookieConsent', 'accepted'); showCookieBanner = false"
-                            class="px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                            class="px-6 py-2 text-sm font-medium text-white bg-gradient-genesis rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                         {{ __('messages.cookies.accept') }}
                     </button>
                 </div>

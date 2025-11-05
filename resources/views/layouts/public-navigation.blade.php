@@ -1,6 +1,6 @@
 <nav x-data="{ open: false }" class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 fixed top-0 left-0 right-0 z-50 shadow-sm">
     <!-- Decorative gradient border -->
-    <div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-sky-500/50 to-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0 h-px bg-gradient-genesis opacity-50"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-28">
@@ -14,22 +14,22 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <a href="{{ route('home') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('home') ? 'border-sky-500 dark:border-sky-400' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('home') ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400' }} hover:text-sky-600 dark:hover:text-sky-400 hover:border-sky-300 dark:hover:border-sky-500 focus:outline-none focus:text-sky-600 dark:focus:text-sky-400 transition-all duration-300 ease-in-out group">
+                    <a href="{{ route('home') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('home') ? 'border-genesis-blue-500 dark:border-genesis-blue-400' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('home') ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400' }} hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 hover:border-genesis-blue-300 dark:hover:border-genesis-blue-500 focus:outline-none focus:text-genesis-blue-600 dark:focus:text-genesis-blue-400 transition-all duration-300 ease-in-out group">
                         {{ __('messages.nav.home') }}
                     </a>
-                    <a href="{{ route('services') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('services') ? 'border-sky-500 dark:border-sky-400' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('services') ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400' }} hover:text-sky-600 dark:hover:text-sky-400 hover:border-sky-300 dark:hover:border-sky-500 focus:outline-none focus:text-sky-600 dark:focus:text-sky-400 transition-all duration-300 ease-in-out group">
+                    <a href="{{ route('services') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('services') ? 'border-genesis-blue-500 dark:border-genesis-blue-400' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('services') ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400' }} hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 hover:border-genesis-blue-300 dark:hover:border-genesis-blue-500 focus:outline-none focus:text-genesis-blue-600 dark:focus:text-genesis-blue-400 transition-all duration-300 ease-in-out group">
                         {{ __('messages.nav.services') }}
                     </a>
-                    <a href="{{ route('about') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('about') ? 'border-sky-500 dark:border-sky-400' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('about') ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400' }} hover:text-sky-600 dark:hover:text-sky-400 hover:border-sky-300 dark:hover:border-sky-500 focus:outline-none focus:text-sky-600 dark:focus:text-sky-400 transition-all duration-300 ease-in-out group">
+                    <a href="{{ route('about') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('about') ? 'border-genesis-blue-500 dark:border-genesis-blue-400' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('about') ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400' }} hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 hover:border-genesis-blue-300 dark:hover:border-genesis-blue-500 focus:outline-none focus:text-genesis-blue-600 dark:focus:text-genesis-blue-400 transition-all duration-300 ease-in-out group">
                         {{ __('messages.nav.about') }}
                     </a>
-                    <a href="{{ route('projects') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('projects') ? 'border-sky-500 dark:border-sky-400' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('projects') ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400' }} hover:text-sky-600 dark:hover:text-sky-400 hover:border-sky-300 dark:hover:border-sky-500 focus:outline-none focus:text-sky-600 dark:focus:text-sky-400 transition-all duration-300 ease-in-out group">
+                    <a href="{{ route('projects') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('projects') ? 'border-genesis-blue-500 dark:border-genesis-blue-400' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('projects') ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400' }} hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 hover:border-genesis-blue-300 dark:hover:border-genesis-blue-500 focus:outline-none focus:text-genesis-blue-600 dark:focus:text-genesis-blue-400 transition-all duration-300 ease-in-out group">
                         {{ __('messages.nav.projects') }}
                     </a>
-                    <a href="{{ route('blog.index') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('blog.*') ? 'border-sky-500 dark:border-sky-400' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('blog.*') ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400' }} hover:text-sky-600 dark:hover:text-sky-400 hover:border-sky-300 dark:hover:border-sky-500 focus:outline-none focus:text-sky-600 dark:focus:text-sky-400 transition-all duration-300 ease-in-out group">
+                    <a href="{{ route('blog.index') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('blog.*') ? 'border-genesis-blue-500 dark:border-genesis-blue-400' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('blog.*') ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400' }} hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 hover:border-genesis-blue-300 dark:hover:border-genesis-blue-500 focus:outline-none focus:text-genesis-blue-600 dark:focus:text-genesis-blue-400 transition-all duration-300 ease-in-out group">
                         {{ __('messages.nav.blog') }}
                     </a>
-                    <a href="{{ route('contact') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('contact') ? 'border-sky-500 dark:border-sky-400' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('contact') ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400' }} hover:text-sky-600 dark:hover:text-sky-400 hover:border-sky-300 dark:hover:border-sky-500 focus:outline-none focus:text-sky-600 dark:focus:text-sky-400 transition-all duration-300 ease-in-out group">
+                    <a href="{{ route('contact') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('contact') ? 'border-genesis-blue-500 dark:border-genesis-blue-400' : 'border-transparent' }} text-lg font-medium leading-5 {{ request()->routeIs('contact') ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400' }} hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 hover:border-genesis-blue-300 dark:hover:border-genesis-blue-500 focus:outline-none focus:text-genesis-blue-600 dark:focus:text-genesis-blue-400 transition-all duration-300 ease-in-out group">
                         {{ __('messages.nav.contact') }}
                     </a>
                 </div>
@@ -39,7 +39,7 @@
             <div class="hidden sm:flex sm:items-center sm:ms-6 gap-4">
                 <!-- Language Switcher -->
                 <div x-data="{ open: false }" class="relative">
-                    <button @click="open = !open" type="button" class="inline-flex items-center gap-2 px-4 py-3 text-base font-medium text-gray-700 dark:text-gray-200 hover:text-sky-600 dark:hover:text-sky-400 focus:outline-none transition-all duration-300">
+                    <button @click="open = !open" type="button" class="inline-flex items-center gap-2 px-4 py-3 text-base font-medium text-gray-700 dark:text-gray-200 hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 focus:outline-none transition-all duration-300">
                         @if(app()->getLocale() === 'fr')
                             <svg class="w-7 h-5 rounded shadow-sm" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="900" height="600" fill="#ED2939"/>
@@ -63,7 +63,7 @@
                     </button>
                     <div x-show="open" @click.away="open = false" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute right-0 mt-2 w-52 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black/5 dark:ring-white/10 py-1 z-50">
                         @foreach(config('app.available_locales') as $locale => $localeData)
-                            <a href="{{ route('locale.switch', $locale) }}" class="flex items-center gap-3 px-4 py-3 text-base text-gray-700 dark:text-gray-200 hover:bg-sky-50 dark:hover:bg-sky-900/30 hover:text-sky-600 dark:hover:text-sky-400 transition-colors {{ app()->getLocale() === $locale ? 'bg-sky-50 dark:bg-sky-900/30 text-sky-600 dark:text-sky-400' : '' }}">
+                            <a href="{{ route('locale.switch', $locale) }}" class="flex items-center gap-3 px-4 py-3 text-base text-gray-700 dark:text-gray-200 hover:bg-genesis-blue-50 dark:hover:bg-genesis-blue-900/30 hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 transition-colors {{ app()->getLocale() === $locale ? 'bg-genesis-blue-50 dark:bg-genesis-blue-900/30 text-genesis-blue-600 dark:text-genesis-blue-400' : '' }}">
                                 @if($locale === 'fr')
                                     <svg class="w-7 h-5 rounded shadow-sm flex-shrink-0" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="900" height="600" fill="#ED2939"/>
@@ -82,7 +82,7 @@
                                 @endif
                                 <span>{{ $localeData['name'] }}</span>
                                 @if(app()->getLocale() === $locale)
-                                    <svg class="w-5 h-5 ml-auto text-sky-600 dark:text-sky-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg class="w-5 h-5 ml-auto text-genesis-blue-600 dark:text-genesis-blue-400" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                     </svg>
                                 @endif
@@ -92,7 +92,7 @@
                 </div>
 
                 <!-- Demander un devis Button -->
-                <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 px-7 py-3 text-base font-semibold text-white bg-gradient-to-r from-sky-500 to-cyan-500 rounded-lg hover:from-sky-600 hover:to-cyan-600 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-500/50 focus:ring-offset-2 shadow-sm transition-all duration-300">
+                <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 px-7 py-3 text-base font-semibold text-white bg-gradient-genesis rounded-lg hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-genesis-blue-500/50 focus:ring-offset-2 shadow-sm transition-all duration-300">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                     </svg>
@@ -124,7 +124,7 @@
                     </button>
                     <div x-show="open" @click.away="open = false" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black/5 dark:ring-white/10 py-1 z-50">
                         @foreach(config('app.available_locales') as $locale => $localeData)
-                            <a href="{{ route('locale.switch', $locale) }}" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-sky-50 dark:hover:bg-sky-900/30 hover:text-sky-600 dark:hover:text-sky-400 transition-colors {{ app()->getLocale() === $locale ? 'bg-sky-50 dark:bg-sky-900/30 text-sky-600 dark:text-sky-400' : '' }}">
+                            <a href="{{ route('locale.switch', $locale) }}" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-genesis-blue-50 dark:hover:bg-genesis-blue-900/30 hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 transition-colors {{ app()->getLocale() === $locale ? 'bg-genesis-blue-50 dark:bg-genesis-blue-900/30 text-genesis-blue-600 dark:text-genesis-blue-400' : '' }}">
                                 @if($locale === 'fr')
                                     <svg class="w-6 h-4 rounded shadow-sm flex-shrink-0" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="900" height="600" fill="#ED2939"/>
@@ -147,7 +147,7 @@
                     </div>
                 </div>
 
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 focus:text-sky-600 dark:focus:text-sky-400 transition-all duration-300">
+                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 focus:text-genesis-blue-600 dark:focus:text-genesis-blue-400 transition-all duration-300">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -160,29 +160,29 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden border-t border-gray-200 dark:border-gray-800">
         <div class="pt-2 pb-3 space-y-1 bg-gray-50/50 dark:bg-gray-900/50 backdrop-blur-sm">
-            <a href="{{ route('home') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('home') ? 'border-sky-500 dark:border-sky-400 text-sky-700 dark:text-sky-300 bg-sky-50 dark:bg-sky-900/30' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-sky-700 dark:hover:text-sky-300 hover:bg-sky-50 dark:hover:bg-sky-900/30 hover:border-sky-300 dark:hover:border-sky-500 transition-all duration-300">
+            <a href="{{ route('home') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('home') ? 'border-genesis-blue-500 dark:border-genesis-blue-400 text-genesis-blue-700 dark:text-genesis-blue-300 bg-genesis-blue-50 dark:bg-genesis-blue-900/30' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-genesis-blue-700 dark:hover:text-genesis-blue-300 hover:bg-genesis-blue-50 dark:hover:bg-genesis-blue-900/30 hover:border-genesis-blue-300 dark:hover:border-genesis-blue-500 transition-all duration-300">
                 {{ __('messages.nav.home') }}
             </a>
-            <a href="{{ route('services') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('services') ? 'border-sky-500 dark:border-sky-400 text-sky-700 dark:text-sky-300 bg-sky-50 dark:bg-sky-900/30' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-sky-700 dark:hover:text-sky-300 hover:bg-sky-50 dark:hover:bg-sky-900/30 hover:border-sky-300 dark:hover:border-sky-500 transition-all duration-300">
+            <a href="{{ route('services') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('services') ? 'border-genesis-blue-500 dark:border-genesis-blue-400 text-genesis-blue-700 dark:text-genesis-blue-300 bg-genesis-blue-50 dark:bg-genesis-blue-900/30' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-genesis-blue-700 dark:hover:text-genesis-blue-300 hover:bg-genesis-blue-50 dark:hover:bg-genesis-blue-900/30 hover:border-genesis-blue-300 dark:hover:border-genesis-blue-500 transition-all duration-300">
                 {{ __('messages.nav.services') }}
             </a>
-            <a href="{{ route('about') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('about') ? 'border-sky-500 dark:border-sky-400 text-sky-700 dark:text-sky-300 bg-sky-50 dark:bg-sky-900/30' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-sky-700 dark:hover:text-sky-300 hover:bg-sky-50 dark:hover:bg-sky-900/30 hover:border-sky-300 dark:hover:border-sky-500 transition-all duration-300">
+            <a href="{{ route('about') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('about') ? 'border-genesis-blue-500 dark:border-genesis-blue-400 text-genesis-blue-700 dark:text-genesis-blue-300 bg-genesis-blue-50 dark:bg-genesis-blue-900/30' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-genesis-blue-700 dark:hover:text-genesis-blue-300 hover:bg-genesis-blue-50 dark:hover:bg-genesis-blue-900/30 hover:border-genesis-blue-300 dark:hover:border-genesis-blue-500 transition-all duration-300">
                 {{ __('messages.nav.about') }}
             </a>
-            <a href="{{ route('projects') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('projects') ? 'border-sky-500 dark:border-sky-400 text-sky-700 dark:text-sky-300 bg-sky-50 dark:bg-sky-900/30' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-sky-700 dark:hover:text-sky-300 hover:bg-sky-50 dark:hover:bg-sky-900/30 hover:border-sky-300 dark:hover:border-sky-500 transition-all duration-300">
+            <a href="{{ route('projects') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('projects') ? 'border-genesis-blue-500 dark:border-genesis-blue-400 text-genesis-blue-700 dark:text-genesis-blue-300 bg-genesis-blue-50 dark:bg-genesis-blue-900/30' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-genesis-blue-700 dark:hover:text-genesis-blue-300 hover:bg-genesis-blue-50 dark:hover:bg-genesis-blue-900/30 hover:border-genesis-blue-300 dark:hover:border-genesis-blue-500 transition-all duration-300">
                 {{ __('messages.nav.projects') }}
             </a>
-            <a href="{{ route('blog.index') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('blog.*') ? 'border-sky-500 dark:border-sky-400 text-sky-700 dark:text-sky-300 bg-sky-50 dark:bg-sky-900/30' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-sky-700 dark:hover:text-sky-300 hover:bg-sky-50 dark:hover:bg-sky-900/30 hover:border-sky-300 dark:hover:border-sky-500 transition-all duration-300">
+            <a href="{{ route('blog.index') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('blog.*') ? 'border-genesis-blue-500 dark:border-genesis-blue-400 text-genesis-blue-700 dark:text-genesis-blue-300 bg-genesis-blue-50 dark:bg-genesis-blue-900/30' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-genesis-blue-700 dark:hover:text-genesis-blue-300 hover:bg-genesis-blue-50 dark:hover:bg-genesis-blue-900/30 hover:border-genesis-blue-300 dark:hover:border-genesis-blue-500 transition-all duration-300">
                 {{ __('messages.nav.blog') }}
             </a>
-            <a href="{{ route('contact') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('contact') ? 'border-sky-500 dark:border-sky-400 text-sky-700 dark:text-sky-300 bg-sky-50 dark:bg-sky-900/30' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-sky-700 dark:hover:text-sky-300 hover:bg-sky-50 dark:hover:bg-sky-900/30 hover:border-sky-300 dark:hover:border-sky-500 transition-all duration-300">
+            <a href="{{ route('contact') }}" class="block ps-3 pe-4 py-2 border-l-4 {{ request()->routeIs('contact') ? 'border-genesis-blue-500 dark:border-genesis-blue-400 text-genesis-blue-700 dark:text-genesis-blue-300 bg-genesis-blue-50 dark:bg-genesis-blue-900/30' : 'border-transparent text-gray-600 dark:text-gray-400' }} text-base font-medium hover:text-genesis-blue-700 dark:hover:text-genesis-blue-300 hover:bg-genesis-blue-50 dark:hover:bg-genesis-blue-900/30 hover:border-genesis-blue-300 dark:hover:border-genesis-blue-500 transition-all duration-300">
                 {{ __('messages.nav.contact') }}
             </a>
         </div>
 
         <!-- Demander un devis Mobile Button -->
         <div class="pt-4 pb-4 px-4 border-t border-gray-200 dark:border-gray-600">
-            <a href="{{ route('contact') }}" class="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-semibold text-white bg-gradient-to-r from-sky-500 to-cyan-500 rounded-lg hover:from-sky-600 hover:to-cyan-600 shadow-lg transition-all duration-300">
+            <a href="{{ route('contact') }}" class="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-semibold text-white bg-gradient-genesis rounded-lg shadow-lg transition-all duration-300">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                 </svg>

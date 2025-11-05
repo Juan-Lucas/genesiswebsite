@@ -49,10 +49,10 @@
 
     <!-- Chat Button -->
     <button @click="chatOpen = !chatOpen"
-            class="group relative w-16 h-16 bg-gradient-to-br from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 rounded-full shadow-2xl hover:shadow-sky-500/50 transition-all duration-300 hover:scale-110 flex items-center justify-center"
+            class="group relative w-16 h-16 bg-gradient-genesis hover:shadow-genesis-500/50 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
             :class="{ 'scale-0': chatOpen }">
         <!-- Pulse animation -->
-        <span class="absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75 animate-ping"></span>
+        <span class="absolute inline-flex h-full w-full rounded-full bg-genesis-blue-400 opacity-75 animate-ping"></span>
 
         <!-- Chat Icon -->
         <svg class="w-8 h-8 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@
          style="display: none;">
 
         <!-- Chat Header -->
-        <div class="bg-gradient-to-r from-sky-500 to-cyan-500 p-3 flex items-center justify-between">
+        <div class="bg-gradient-genesis p-3 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <div class="relative">
                     <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
@@ -106,7 +106,7 @@
                 <div :class="message.type === 'user' ? 'flex justify-end' : 'flex justify-start'">
                     <div :class="message.type === 'user' ? 'order-2' : 'order-1'" class="flex flex-col max-w-xs">
                         <div :class="message.type === 'user'
-                                ? 'bg-gradient-to-r from-sky-500 to-cyan-500 text-white rounded-2xl rounded-tr-sm'
+                                ? 'bg-gradient-genesis text-white rounded-2xl rounded-tr-sm'
                                 : 'bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 rounded-2xl rounded-tl-sm'"
                              class="px-4 py-3 shadow-sm">
                             <p class="text-sm leading-relaxed" x-text="message.text"></p>
@@ -125,10 +125,10 @@
                 <input x-model="newMessage"
                        type="text"
                        placeholder="Écrivez votre message..."
-                       class="flex-1 px-4 py-3 bg-gray-100 dark:bg-gray-700 border-0 rounded-xl text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-sky-500 transition-all"
+                       class="flex-1 px-4 py-3 bg-gray-100 dark:bg-gray-700 border-0 rounded-xl text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-genesis-blue-500 transition-all"
                        @keydown.enter="sendMessage">
                 <button type="submit"
-                        class="px-4 py-3 bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white rounded-xl transition-all duration-300 hover:scale-105 shadow-lg">
+                        class="px-4 py-3 bg-gradient-genesis text-white rounded-xl transition-all duration-300 hover:scale-105 shadow-lg">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
                     </svg>
