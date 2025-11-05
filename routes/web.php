@@ -1,13 +1,19 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
+
+// Language switcher
+Route::get('/lang/{locale}', [LocaleController::class, 'switch'])->name('locale.switch');
 
 // Public pages
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/services', [PageController::class, 'services'])->name('services');
+Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/projects', [PageController::class, 'projects'])->name('projects');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');

@@ -18,10 +18,46 @@
 </div>
 
 <!-- Services Grid -->
-<div class="bg-gray-50 dark:bg-gray-800 py-16">
+<div class="bg-gray-50 dark:bg-gray-800 py-16 relative">
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <!-- Service 1: Web Development -->
+            @php
+                $services = \App\Models\Service::published()->get();
+            @endphp
+
+            @forelse($services as $service)
+            <a href="{{ route('services.show', $service) }}" class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                <div class="p-8">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-md bg-gradient-to-br from-{{ $service->color }}-500 to-{{ $service->color }}-600 text-white mb-4 group-hover:scale-110 transition-transform duration-300">
+                        {!! $service->icon !!}
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-{{ $service->color }}-500 transition-colors">{{ $service->title }}</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        {{ $service->description }}
+                    </p>
+                    @if($service->features)
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        @foreach(array_slice($service->features, 0, 4) as $feature)
+                        <li class="flex items-center">
+                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            {{ $feature }}
+                        </li>
+                        @endforeach
+                    </ul>
+                    @endif
+                    <div class="mt-6 flex items-center text-sky-500 dark:text-sky-400 font-medium group-hover:translate-x-2 transition-transform">
+                        En savoir plus
+                        <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+            @empty
+            <!-- Fallback services si aucun service en base -->
             <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div class="p-8">
                     <div class="flex items-center justify-center h-16 w-16 rounded-md bg-indigo-500 text-white mb-4">
@@ -42,7 +78,6 @@
                 </div>
             </div>
 
-            <!-- Service 2: Mobile Apps -->
             <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div class="p-8">
                     <div class="flex items-center justify-center h-16 w-16 rounded-md bg-indigo-500 text-white mb-4">
@@ -63,7 +98,6 @@
                 </div>
             </div>
 
-            <!-- Service 3: Cloud Solutions -->
             <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div class="p-8">
                     <div class="flex items-center justify-center h-16 w-16 rounded-md bg-indigo-500 text-white mb-4">
@@ -84,7 +118,6 @@
                 </div>
             </div>
 
-            <!-- Service 4: Consulting -->
             <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div class="p-8">
                     <div class="flex items-center justify-center h-16 w-16 rounded-md bg-indigo-500 text-white mb-4">
@@ -105,7 +138,6 @@
                 </div>
             </div>
 
-            <!-- Service 5: UI/UX Design -->
             <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div class="p-8">
                     <div class="flex items-center justify-center h-16 w-16 rounded-md bg-indigo-500 text-white mb-4">
@@ -126,7 +158,6 @@
                 </div>
             </div>
 
-            <!-- Service 6: Maintenance -->
             <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div class="p-8">
                     <div class="flex items-center justify-center h-16 w-16 rounded-md bg-indigo-500 text-white mb-4">
@@ -147,12 +178,14 @@
                     </ul>
                 </div>
             </div>
+            @endforelse
         </div>
     </div>
 </div>
 
 <!-- CTA Section -->
-<div class="bg-white dark:bg-gray-900 py-16">
+<div class="bg-white dark:bg-gray-900 py-16 relative">
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">
             Intéressé par nos services ?

@@ -26,7 +26,7 @@
             @include('layouts.public-navigation')
 
             <!-- Page Content -->
-            <main>
+            <main class="pt-24">
                 @yield('content')
             </main>
 

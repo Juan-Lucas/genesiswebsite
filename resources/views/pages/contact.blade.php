@@ -18,7 +18,8 @@
 </div>
 
 <!-- Contact Section -->
-<div class="bg-gray-50 dark:bg-gray-800 py-16">
+<div class="bg-gray-50 dark:bg-gray-800 py-16 relative">
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <!-- Contact Form -->

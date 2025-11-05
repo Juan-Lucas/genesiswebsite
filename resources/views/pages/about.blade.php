@@ -18,7 +18,8 @@
 </div>
 
 <!-- Company Story -->
-<div class="bg-gray-50 dark:bg-gray-800 py-16">
+<div class="bg-gray-50 dark:bg-gray-800 py-16 relative">
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
             <div>
@@ -62,7 +63,8 @@
 </div>
 
 <!-- Our Values -->
-<div class="bg-white dark:bg-gray-900 py-16">
+<div class="bg-white dark:bg-gray-900 py-16 relative">
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">
@@ -114,7 +116,8 @@
 </div>
 
 <!-- Team Section -->
-<div class="bg-gray-50 dark:bg-gray-800 py-16">
+<div class="bg-gray-50 dark:bg-gray-800 py-16 relative">
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">
@@ -162,7 +165,8 @@
 </div>
 
 <!-- CTA Section -->
-<div class="bg-indigo-700 dark:bg-indigo-900">
+<div class="bg-indigo-700 dark:bg-indigo-900 relative">
+    <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-400/0 via-indigo-400/60 to-indigo-400/0"></div>
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
         <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             <span class="block">Rejoignez l'aventure Genesis</span>
