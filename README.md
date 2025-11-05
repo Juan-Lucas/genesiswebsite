@@ -25,6 +25,23 @@
 - Production de contenus créatifs (photo, vidéo, rédaction)
 - Conseil & accompagnement digital
 
+## Brochure PDF
+
+Le site permet de télécharger une brochure professionnelle au format PDF présentant Genesis, ses services et ses valeurs. 
+
+### Fonctionnalités
+- Génération dynamique de PDF avec DomPDF
+- Design professionnel et branding Genesis
+- Contenu complet : présentation, services, statistiques, valeurs et contact
+- Accessible depuis la page "À propos" et le footer du site
+
+### Utilisation
+- **Depuis la page À propos** : Un bouton de téléchargement est disponible dans la section "Notre Histoire"
+- **Depuis le footer** : Lien "Télécharger la brochure" dans la section Contact (accessible sur toutes les pages)
+- **URL directe** : `/brochure/download`
+
+La brochure est générée à la volée et nommée automatiquement `Genesis-Brochure-YYYY.pdf` avec l'année en cours.
+
 ## Projets
 
 Découvrez quelques-unes de nos réalisations dans la section dédiée du site. Chaque projet est pensé pour répondre aux besoins spécifiques de nos clients, en alliant créativité, performance et expérience utilisateur.

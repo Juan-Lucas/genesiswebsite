@@ -78,11 +78,25 @@ return [
     |
     */
 
-    'locale' => env('APP_LOCALE', 'en'),
+    'locale' => env('APP_LOCALE', 'fr'),
 
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
 
-    'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
+    'faker_locale' => env('APP_FAKER_LOCALE', 'fr_FR'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Available Locales
+    |--------------------------------------------------------------------------
+    |
+    | List all available locales for the application.
+    |
+    */
+
+    'available_locales' => [
+        'fr' => ['name' => 'Français', 'flag' => '🇫🇷'],
+        'en' => ['name' => 'English', 'flag' => '🇬🇧'],
+    ],
 
     /*
     |--------------------------------------------------------------------------
