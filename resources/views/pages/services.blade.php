@@ -54,7 +54,9 @@
                     <div class="relative inline-flex items-center justify-center h-16 w-16 mb-6">
                         <div class="absolute inset-0 bg-gradient-to-br from-{{ $service->color }}-500 to-{{ $service->color }}-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
                         <div class="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-{{ $service->color }}-500 to-{{ $service->color }}-600 text-white group-hover:scale-110 transition-transform duration-300">
-                            {!! $service->icon !!}
+                            <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                {!! $service->icon !!}
+                            </svg>
                         </div>
                     </div>
 
