@@ -51,9 +51,12 @@
             this.autoplay = setInterval(() => { this.next(); }, 5000);
         }
     }">
-        <div class="mx-auto max-w-2xl py-12 sm:py-16 lg:py-24">
+        <div class="mx-auto max-w-7xl py-12 sm:py-16 lg:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Content -->
+                <div>
             <!-- Badge animé -->
-            <div class="hidden sm:mb-8 sm:flex sm:justify-center animate-on-scroll">
+            <div class="mb-8 flex justify-center lg:justify-start animate-on-scroll">
                 <div class="relative rounded-full px-4 py-1.5 text-sm leading-6 text-gray-300 ring-1 ring-white/10 hover:ring-white/20 backdrop-blur-sm transition-all duration-300 bg-white/5 pulse-glow shimmer">
                     <span x-text="slides[currentSlide].badge"></span>
                     <a href="{{ route('projects') }}" class="font-semibold text-genesis-blue-500 ml-1 hover:text-genesis-blue-400 transition-colors">
@@ -63,9 +66,9 @@
                 </div>
             </div>
 
-            <div class="text-center">
+            <div class="text-center lg:text-left">
                 <!-- Slider Content -->
-                <div class="relative min-h-[400px] sm:min-h-[300px]">
+                <div class="relative min-h-[350px] sm:min-h-[300px]">
                     <template x-for="(slide, index) in slides" :key="index">
                         <div x-show="currentSlide === index"
                              x-transition:enter="transition ease-out duration-500"
@@ -75,10 +78,10 @@
                              x-transition:leave-start="opacity-100 transform translate-x-0"
                              x-transition:leave-end="opacity-0 transform -translate-x-8"
                              class="absolute inset-0">
-                            <h1 class="text-5xl font-bold tracking-tight text-balance text-white sm:text-7xl leading-tight"
+                            <h1 class="text-4xl font-bold tracking-tight text-balance text-white sm:text-6xl lg:text-7xl leading-tight"
                                 x-text="slide.title">
                             </h1>
-                            <p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8 max-w-2xl mx-auto"
+                            <p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8 max-w-2xl mx-auto lg:mx-0"
                                x-text="slide.description">
                             </p>
                         </div>
@@ -123,6 +126,11 @@
                         </svg>
                     </button>
                 </div>
+            </div>
+
+            <!-- Right: Illustration -->
+            <div class="hidden lg:block animate-on-scroll opacity-0 translate-x-10">
+                <x-illustrations.team-collaboration class="w-full h-auto drop-shadow-2xl" />
             </div>
         </div>
     </div>

@@ -105,6 +105,8 @@
 
             <!-- Stats card -->
             <div class="mt-12 lg:mt-0 animate-on-scroll">
+                <x-illustrations.success class="w-full h-auto max-w-lg mx-auto lg:max-w-none drop-shadow-2xl mb-8" />
+
                 <div class="relative group card-3d">
                     <!-- Glow effect -->
                     <div class="absolute inset-0 bg-gradient-genesis rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
@@ -143,6 +145,7 @@
 <div class="bg-white dark:bg-gray-900 py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
+            <x-illustrations.innovation class="w-64 h-auto mx-auto mb-8 opacity-90" />
             <h2 class="text-base font-semibold text-sky-600 dark:text-sky-400 tracking-wide uppercase">Nos Valeurs</h2>
             <p class="mt-2 text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white">
                 Les principes qui nous guident

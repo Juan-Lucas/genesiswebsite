@@ -45,6 +45,11 @@
 <!-- Contact Section -->
 <div class="bg-gray-50 dark:bg-gray-800 py-16 sm:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Illustration en haut -->
+        <div class="flex justify-center mb-12 animate-on-scroll opacity-0">
+            <x-illustrations.mobile-app class="w-full max-w-md h-auto opacity-90" />
+        </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <!-- Contact Form -->
             <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-xl p-8 ring-1 ring-gray-200 dark:ring-gray-600 card-3d animate-on-scroll">
