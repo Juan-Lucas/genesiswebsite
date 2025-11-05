@@ -7,24 +7,24 @@
 <div class="relative bg-gradient-to-b from-gray-900 via-gray-900 to-white dark:to-gray-900 overflow-hidden">
     <!-- Decorative background elements -->
     <div class="absolute inset-0">
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-genesis-blue-500/20 rounded-full blur-3xl parallax-slow float-animation" data-speed="0.3"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-genesis-purple-600/20 rounded-full blur-3xl parallax-fast float-animation" data-speed="0.5"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div class="text-center">
             <!-- Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700 mb-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700 mb-8 pulse-glow shimmer animate-on-scroll">
                 <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-genesis-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-genesis-blue-500"></span>
                 </span>
                 <span class="text-sm font-medium text-white dark:text-gray-200">Solutions digitales complètes</span>
             </div>
 
             <!-- Title -->
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
-                Nos <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight animate-on-scroll">
+                Nos <span class="bg-gradient-genesis bg-clip-text text-transparent">Services</span>
             </h1>
             <p class="mt-6 text-xl md:text-2xl text-gray-300 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
                 Des solutions complètes pour transformer votre présence digitale
@@ -43,13 +43,13 @@
 <!-- Services Grid -->
 <div class="bg-gray-50 dark:bg-gray-800 py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 stagger-parent">
             @php
                 $services = \App\Models\Service::published()->get();
             @endphp
 
             @forelse($services as $service)
-            <a href="{{ route('services.show', $service) }}" class="group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+            <a href="{{ route('services.show', $service) }}" class="group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
                 <!-- Gradient border effect -->
                 <div class="absolute inset-0 bg-gradient-to-br from-sky-500/20 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -144,7 +144,7 @@
                     'features' => ['Support 24/7', 'Mises à jour', 'Corrections bugs', 'Optimisation']
                 ]
             ] as $fallbackService)
-            <div class="group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+            <div class="group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
                 <!-- Gradient border effect -->
                 <div class="absolute inset-0 bg-gradient-to-br from-{{ $fallbackService['color'] }}-500/20 via-transparent to-{{ $fallbackService['color'] }}-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -199,43 +199,49 @@
 
 <!-- Stats Section -->
 <div class="bg-white dark:bg-gray-900 py-20 relative">
-    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-500/50 to-transparent"></div>
+    <div class="absolute inset-x-0 top-0 h-1 bg-gradient-genesis opacity-50"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
-            <div class="text-center">
-                <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent mb-2">150+</div>
-                <div class="text-sm md:text-base text-gray-600 dark:text-gray-400">Projets réalisés</div>
+            <div class="text-center group stat-card animate-on-scroll hover:scale-105 transition-transform duration-300">
+                <div class="text-4xl md:text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">
+                    <span data-count="150">0</span>+
+                </div>
+                <div class="text-sm md:text-base text-gray-600 dark:text-gray-400 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">Projets réalisés</div>
             </div>
-            <div class="text-center">
-                <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent mb-2">98%</div>
-                <div class="text-sm md:text-base text-gray-600 dark:text-gray-400">Clients satisfaits</div>
+            <div class="text-center group stat-card animate-on-scroll hover:scale-105 transition-transform duration-300">
+                <div class="text-4xl md:text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">
+                    <span data-count="98">0</span>%
+                </div>
+                <div class="text-sm md:text-base text-gray-600 dark:text-gray-400 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">Clients satisfaits</div>
             </div>
-            <div class="text-center">
-                <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent mb-2">10+</div>
-                <div class="text-sm md:text-base text-gray-600 dark:text-gray-400">Ans d'expérience</div>
+            <div class="text-center group stat-card animate-on-scroll hover:scale-105 transition-transform duration-300">
+                <div class="text-4xl md:text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">
+                    <span data-count="10">0</span>+
+                </div>
+                <div class="text-sm md:text-base text-gray-600 dark:text-gray-400 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">Ans d'expérience</div>
             </div>
-            <div class="text-center">
-                <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent mb-2">24/7</div>
-                <div class="text-sm md:text-base text-gray-600 dark:text-gray-400">Support disponible</div>
+            <div class="text-center group stat-card animate-on-scroll hover:scale-105 transition-transform duration-300">
+                <div class="text-4xl md:text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">24/7</div>
+                <div class="text-sm md:text-base text-gray-600 dark:text-gray-400 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">Support disponible</div>
             </div>
         </div>
     </div>
 </div>
 
 <!-- CTA Section with gradient -->
-<div class="relative bg-gradient-to-br from-sky-500 via-cyan-500 to-blue-600 overflow-hidden">
+<div class="relative bg-gradient-genesis overflow-hidden">
     <!-- Decorative elements -->
     <div class="absolute inset-0">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl float-animation" style="animation-delay: 0.5s;"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl float-animation" style="animation-delay: 1s;"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 animate-on-scroll">
             Prêt à démarrer votre projet ?
         </h2>
-        <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+        <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto animate-on-scroll">
             Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment nous pouvons vous aider
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
