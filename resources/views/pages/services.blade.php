@@ -95,99 +95,10 @@
                 <div class="h-1 bg-gradient-to-r from-{{ $service->color }}-500 to-{{ $service->color }}-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
             </a>
             @empty
-            <!-- Fallback services avec design modernisé -->
-            @foreach([
-                [
-                    'title' => 'Développement Web',
-                    'description' => 'Création de sites web modernes et responsive avec les dernières technologies (Laravel, React, Vue.js).',
-                    'color' => 'sky',
-                    'icon' => '<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>',
-                    'features' => ['Sites vitrine', 'E-commerce', 'Applications web', 'API REST']
-                ],
-                [
-                    'title' => 'Applications Mobile',
-                    'description' => 'Développement d\'applications natives et cross-platform pour iOS et Android.',
-                    'color' => 'cyan',
-                    'icon' => '<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>',
-                    'features' => ['Applications natives', 'React Native / Flutter', 'UI/UX Design', 'Maintenance']
-                ],
-                [
-                    'title' => 'Solutions Cloud',
-                    'description' => 'Migration et hébergement cloud avec AWS, Azure, et Google Cloud Platform.',
-                    'color' => 'blue',
-                    'icon' => '<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>',
-                    'features' => ['Migration cloud', 'DevOps CI/CD', 'Infrastructure as Code', 'Monitoring']
-                ],
-                [
-                    'title' => 'Consulting IT',
-                    'description' => 'Accompagnement stratégique pour votre transformation digitale.',
-                    'color' => 'indigo',
-                    'icon' => '<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>',
-                    'features' => ['Audit technique', 'Architecture logicielle', 'Stratégie digitale', 'Formation équipes']
-                ],
-                [
-                    'title' => 'UI/UX Design',
-                    'description' => 'Création d\'interfaces utilisateur intuitives et attractives.',
-                    'color' => 'purple',
-                    'icon' => '<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>',
-                    'features' => ['Design système', 'Prototypage', 'Tests utilisateurs', 'Wireframing']
-                ],
-                [
-                    'title' => 'Maintenance & Support',
-                    'description' => 'Support technique et maintenance continue de vos applications.',
-                    'color' => 'emerald',
-                    'icon' => '<svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>',
-                    'features' => ['Support 24/7', 'Mises à jour', 'Corrections bugs', 'Optimisation']
-                ]
-            ] as $fallbackService)
-            <div class="group relative bg-white dark:bg-gray-900 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
-                <!-- Gradient border effect -->
-                <div class="absolute inset-0 bg-gradient-to-br from-{{ $fallbackService['color'] }}-500/20 via-transparent to-{{ $fallbackService['color'] }}-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                <div class="relative p-8">
-                    <!-- Icon with gradient background -->
-                    <div class="relative inline-flex items-center justify-center h-16 w-16 mb-6">
-                        <div class="absolute inset-0 bg-gradient-to-br from-{{ $fallbackService['color'] }}-500 to-{{ $fallbackService['color'] }}-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                        <div class="relative flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-{{ $fallbackService['color'] }}-500 to-{{ $fallbackService['color'] }}-600 text-white group-hover:scale-110 transition-transform duration-300">
-                            {!! $fallbackService['icon'] !!}
-                        </div>
-                    </div>
-
-                    <!-- Title -->
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                        {{ $fallbackService['title'] }}
-                    </h3>
-
-                    <!-- Description -->
-                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                        {{ $fallbackService['description'] }}
-                    </p>
-
-                    <!-- Features list -->
-                    <ul class="space-y-3 mb-6">
-                        @foreach($fallbackService['features'] as $feature)
-                        <li class="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-400">
-                            <svg class="h-5 w-5 text-{{ $fallbackService['color'] }}-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>{{ $feature }}</span>
-                        </li>
-                        @endforeach
-                    </ul>
-
-                    <!-- CTA text -->
-                    <div class="flex items-center gap-2 text-genesis-blue-600 dark:text-genesis-blue-400 font-semibold">
-                        <span>En savoir plus</span>
-                        <svg class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Bottom gradient line -->
-                <div class="h-1 bg-gradient-to-r from-{{ $fallbackService['color'] }}-500 to-{{ $fallbackService['color'] }}-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+            <!-- Aucun service disponible -->
+            <div class="col-span-full text-center py-12">
+                <p class="text-gray-600 dark:text-gray-400 text-lg">Aucun service disponible pour le moment.</p>
             </div>
-            @endforeach
             @endforelse
         </div>
     </div>
