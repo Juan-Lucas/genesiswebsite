@@ -31,14 +31,6 @@ class PageController extends Controller
     }
 
     /**
-     * Display the projects page.
-     */
-    public function projects(): View
-    {
-        return view('pages.projects');
-    }
-
-    /**
      * Display the contact page.
      */
     public function contact(): View

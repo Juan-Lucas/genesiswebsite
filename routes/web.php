@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,8 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/services', [PageController::class, 'services'])->name('services');
 Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
 Route::get('/about', [PageController::class, 'about'])->name('about');
-Route::get('/projects', [PageController::class, 'projects'])->name('projects');
+Route::get('/projets', [ProjectController::class, 'index'])->name('projects');
+Route::get('/projets/{project}', [ProjectController::class, 'show'])->name('projects.show');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 // Blog routes

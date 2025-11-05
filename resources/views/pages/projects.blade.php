@@ -45,203 +45,42 @@
 <div class="bg-gray-50 dark:bg-gray-800 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 stagger-parent">
-            <!-- Project 1 -->
-            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
-                <div class="relative h-56 bg-gradient-to-br from-sky-500 via-cyan-500 to-blue-600 flex items-center justify-center overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-blue-600/20 group-hover:scale-110 transition-transform duration-300"></div>
+            @forelse($projects as $project)
+            <!-- Project Card -->
+            <a href="{{ route('projects.show', $project) }}" class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
+                <div class="relative h-56 bg-gradient-to-br from-{{ $project->color }}-500 via-{{ $project->color }}-500 to-{{ $project->color }}-600 flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-{{ $project->color }}-500/20 to-{{ $project->color }}-600/20 group-hover:scale-110 transition-transform duration-300"></div>
                     <div class="relative">
-                        <div class="absolute inset-0 bg-sky-400/50 blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                        <svg class="relative h-24 w-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-                        </svg>
+                        <div class="absolute inset-0 bg-{{ $project->color }}-400/50 blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                        <div class="relative">
+                            {!! $project->icon !!}
+                        </div>
                     </div>
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-gradient-to-r from-sky-500 to-cyan-500 text-white rounded-full">
-                            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-                            </svg>
-                            E-commerce
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-gradient-to-r from-{{ $project->color }}-500 to-{{ $project->color }}-600 text-white rounded-full capitalize">
+                            {{ $project->category }}
                         </span>
-                        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">2024</span>
+                        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">{{ $project->year }}</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">ShopHub</h3>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-{{ $project->color }}-600 dark:group-hover:text-{{ $project->color }}-400 transition-colors">{{ $project->title }}</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                        Plateforme e-commerce complète avec gestion de stock avancée, paiements sécurisés multi-devises et tableau de bord analytique en temps réel.
+                        {{ Str::limit($project->description, 150) }}
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 text-xs font-medium bg-sky-100 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 rounded-full">Laravel</span>
-                        <span class="px-3 py-1 text-xs font-medium bg-sky-100 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 rounded-full">Vue.js</span>
-                        <span class="px-3 py-1 text-xs font-medium bg-sky-100 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 rounded-full">Stripe</span>
+                        @foreach(array_slice($project->technologies, 0, 3) as $tech)
+                        <span class="px-3 py-1 text-xs font-medium bg-{{ $project->color }}-100 dark:bg-{{ $project->color }}-900/30 text-{{ $project->color }}-700 dark:text-{{ $project->color }}-300 rounded-full">{{ $tech }}</span>
+                        @endforeach
                     </div>
                 </div>
+            </a>
+            @empty
+            <!-- Fallback projects (static) if database is empty -->
+            <div class="col-span-full text-center py-12">
+                <p class="text-gray-500 dark:text-gray-400">Aucun projet disponible pour le moment.</p>
             </div>
-
-            <!-- Project 2 -->
-            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
-                <div class="relative h-56 bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-600 flex items-center justify-center overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-indigo-600/20 group-hover:scale-110 transition-transform duration-300"></div>
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-cyan-400/50 blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                        <svg class="relative h-24 w-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full">
-                            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                            </svg>
-                            Mobile App
-                        </span>
-                        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">2024</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">FitTracker</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                        Application mobile de suivi fitness avec intégration IA pour recommandations personnalisées et coaching adaptatif.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 text-xs font-medium bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded-full">React Native</span>
-                        <span class="px-3 py-1 text-xs font-medium bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded-full">Node.js</span>
-                        <span class="px-3 py-1 text-xs font-medium bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded-full">TensorFlow</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
-                <div class="relative h-56 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 flex items-center justify-center overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-600/20 group-hover:scale-110 transition-transform duration-300"></div>
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-emerald-400/50 blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                        <svg class="relative h-24 w-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full">
-                            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
-                            </svg>
-                            Cloud
-                        </span>
-                        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">2023</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">CloudSync Pro</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                        Solution de synchronisation cloud sécurisée pour entreprises avec chiffrement de bout en bout et haute disponibilité.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 text-xs font-medium bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full">AWS</span>
-                        <span class="px-3 py-1 text-xs font-medium bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full">Python</span>
-                        <span class="px-3 py-1 text-xs font-medium bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full">Docker</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
-                <div class="relative h-56 bg-gradient-to-br from-amber-500 via-orange-500 to-red-600 flex items-center justify-center overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-red-600/20 group-hover:scale-110 transition-transform duration-300"></div>
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-amber-400/50 blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                        <svg class="relative h-24 w-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full">
-                            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                            </svg>
-                            Education
-                        </span>
-                        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">2023</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">EduLearn</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                        Plateforme d'apprentissage en ligne avec cours interactifs, quiz gamifiés et suivi de progression détaillé.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 text-xs font-medium bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full">Next.js</span>
-                        <span class="px-3 py-1 text-xs font-medium bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full">PostgreSQL</span>
-                        <span class="px-3 py-1 text-xs font-medium bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full">Tailwind</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
-                <div class="relative h-56 bg-gradient-to-br from-pink-500 via-rose-500 to-red-600 flex items-center justify-center overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-red-600/20 group-hover:scale-110 transition-transform duration-300"></div>
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-pink-400/50 blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                        <svg class="relative h-24 w-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full">
-                            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                            </svg>
-                            SaaS
-                        </span>
-                        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">2023</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">TaskMaster</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                        Outil de gestion de projets avec collaboration en temps réel, intégrations multiples et automatisations avancées.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 text-xs font-medium bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 rounded-full">Laravel</span>
-                        <span class="px-3 py-1 text-xs font-medium bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 rounded-full">Livewire</span>
-                        <span class="px-3 py-1 text-xs font-medium bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 rounded-full">Redis</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 6 -->
-            <div class="group bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 stagger-child card-3d animate-on-scroll opacity-0 translate-y-10">
-                <div class="relative h-56 bg-gradient-to-br from-purple-500 via-indigo-500 to-blue-600 flex items-center justify-center overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-600/20 group-hover:scale-110 transition-transform duration-300"></div>
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-purple-400/50 blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                        <svg class="relative h-24 w-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-full">
-                            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                            </svg>
-                            Analytics
-                        </span>
-                        <span class="text-xs font-medium text-gray-500 dark:text-gray-400">2024</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">DataViz Pro</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                        Dashboard analytique avancé avec visualisations interactives, rapports personnalisables et prédictions intelligentes.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">React</span>
-                        <span class="px-3 py-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">D3.js</span>
-                        <span class="px-3 py-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">MongoDB</span>
-                    </div>
-                </div>
-            </div>
+            @endforelse
         </div>
     </div>
 </div>
