@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\View\View;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Symfony\Component\HttpFoundation\Response;
 
 class PageController extends Controller
 {
@@ -76,5 +78,18 @@ class PageController extends Controller
     public function contact(): View
     {
         return view('pages.contact');
+    }
+
+    /**
+     * Download the company brochure as PDF.
+     */
+    public function downloadBrochure(): Response
+    {
+        $services = Service::published()->get();
+
+        $pdf = Pdf::loadView('pdf.brochure', compact('services'));
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->download('Genesis-Brochure-' . date('Y') . '.pdf');
     }
 }

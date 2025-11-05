@@ -27,13 +27,13 @@
                 <!-- Icon -->
                 <div class="flex justify-center mb-8 animate-on-scroll">
                     <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-genesis shadow-2xl ring-4 ring-white/20 pulse-glow shimmer">
-                        @if($service->icon)
-                            {!! $service->icon !!}
-                        @else
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                            </svg>
-                        @endif
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            @if($service->icon)
+                                {!! $service->icon !!}
+                            @else
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            @endif
+                        </svg>
                     </div>
                 </div>
 
@@ -239,13 +239,13 @@
             @foreach($relatedServices as $related)
                 <a href="{{ route('services.show', $related) }}" class="group flex flex-col p-8 rounded-2xl bg-white dark:bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300 ring-1 ring-gray-200 dark:ring-gray-700 hover:ring-genesis-blue-500/50 hover:-translate-y-1 stagger-child card-3d animate-on-scroll">
                     <div class="flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-genesis mb-6 group-hover:scale-110 transition-transform duration-300">
-                        @if($related->icon)
-                            {!! $related->icon !!}
-                        @else
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                            </svg>
-                        @endif
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            @if($related->icon)
+                                {!! $related->icon !!}
+                            @else
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            @endif
+                        </svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">
                         {{ $related->title }}

@@ -19,6 +19,7 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/projets', [ProjectController::class, 'index'])->name('projects');
 Route::get('/projets/{project}', [ProjectController::class, 'show'])->name('projects.show');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/brochure/download', [PageController::class, 'downloadBrochure'])->name('brochure.download');
 
 // Blog routes
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
