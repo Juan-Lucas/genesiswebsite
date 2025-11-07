@@ -355,8 +355,8 @@
         <div class="contact-info">
             <h3>Genesis Entreprises</h3>
             <p><strong>Adresse:</strong> Kinshasa, République Démocratique du Congo</p>
-            <p><strong>Email:</strong> contact@genesis-entreprises.com</p>
-            <p><strong>Téléphone:</strong> +243 XX XXX XXXX</p>
+            <p><strong>Email:</strong> infos@genesisentreprise.com</p>
+            <p><strong>Téléphone:</strong> +243 840 812 172</p>
             <p><strong>Site Web:</strong> www.genesis-entreprises.com</p>
         </div>
 

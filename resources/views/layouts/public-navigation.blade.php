@@ -63,7 +63,8 @@
                     </button>
                     <div x-show="open" @click.away="open = false" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute right-0 mt-2 w-52 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black/5 dark:ring-white/10 py-1 z-50">
                         @foreach(config('app.available_locales') as $locale => $localeData)
-                            <a href="{{ route('locale.switch', $locale) }}" class="flex items-center gap-3 px-4 py-3 text-base text-gray-700 dark:text-gray-200 hover:bg-genesis-blue-50 dark:hover:bg-genesis-blue-900/30 hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 transition-colors {{ app()->getLocale() === $locale ? 'bg-genesis-blue-50 dark:bg-genesis-blue-900/30 text-genesis-blue-600 dark:text-genesis-blue-400' : '' }}">
+                            @if($locale === 'fr') {{-- Afficher seulement le français pour le moment --}}
+                            <a href="{{ route('locale.switch', $locale) }}" class="flex items-center gap-3 px-4 py-3 text-base text-gray-700 dark:text-gray-200 hover:bg-genesis-blue-50 dark:hover:bg-genesis-blue-900/30 hover:text-genesis-blue-600 dark:hover:text-genesis-blue-400 transition-colors {{ app()->getLocale() === $locale ? 'bg-genesis-blue-50 dark:bg-genesis-blue-900/30 text-genesis-blue-600 dark:text-genesis-blue-400' : '' }}>">
                                 @if($locale === 'fr')
                                     <svg class="w-7 h-5 rounded shadow-sm flex-shrink-0" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="900" height="600" fill="#ED2939"/>
@@ -87,6 +88,7 @@
                                     </svg>
                                 @endif
                             </a>
+                            @endif {{-- Fin du filtre français --}}
                         @endforeach
                     </div>
                 </div>
