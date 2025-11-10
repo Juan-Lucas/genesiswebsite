@@ -20,15 +20,21 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/projets', [ProjectController::class, 'index'])->name('projects');
 Route::get('/projets/{project}', [ProjectController::class, 'show'])->name('projects.show');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
-Route::post('/contact', [PageController::class, 'storeContact'])->name('contact.store');
-Route::get('/brochure/download', [PageController::class, 'downloadBrochure'])->name('brochure.download');
+Route::post('/contact', [PageController::class, 'storeContact'])
+    ->middleware('throttle:5,1') // 5 requests per minute
+    ->name('contact.store');
+Route::get('/brochure/download', [PageController::class, 'downloadBrochure'])
+    ->middleware('throttle:10,1') // 10 downloads per minute
+    ->name('brochure.download');
 
 // Blog routes
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{article}', [BlogController::class, 'show'])->name('blog.show');
 
 // Newsletter subscription
-Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
+Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])
+    ->middleware('throttle:3,1') // 3 requests per minute
+    ->name('newsletter.subscribe');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
