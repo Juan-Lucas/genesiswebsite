@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Repositories\ArticleRepository;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class BlogController extends Controller
 {
+    public function __construct(
+        private ArticleRepository $articleRepository
+    ) {}
+
     /**
      * Display a listing of blog articles.
      */
@@ -37,11 +42,7 @@ class BlogController extends Controller
     public function show(Article $article): View
     {
         // Get related articles from the same category
-        $relatedArticles = Article::published()
-            ->where('id', '!=', $article->id)
-            ->where('category', $article->category)
-            ->limit(3)
-            ->get();
+        $relatedArticles = $this->articleRepository->getRelated($article, 3);
 
         return view('blog.show', compact('article', 'relatedArticles'));
     }

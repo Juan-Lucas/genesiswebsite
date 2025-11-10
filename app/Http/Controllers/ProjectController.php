@@ -3,16 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Repositories\ProjectRepository;
 use Illuminate\View\View;
 
 class ProjectController extends Controller
 {
+    public function __construct(
+        private ProjectRepository $projectRepository
+    ) {}
+
     /**
      * Display a listing of projects.
      */
     public function index(): View
     {
-        $projects = Project::published()->latest()->get();
+        $projects = $this->projectRepository->getAllPublished();
 
         return view('pages.projects', compact('projects'));
     }
@@ -23,10 +28,7 @@ class ProjectController extends Controller
     public function show(Project $project): View
     {
         // Get related projects (other published projects, excluding current)
-        $relatedProjects = Project::published()
-            ->where('id', '!=', $project->id)
-            ->limit(3)
-            ->get();
+        $relatedProjects = $this->projectRepository->getRelated($project, 3);
 
         return view('projects.show', compact('project', 'relatedProjects'));
     }

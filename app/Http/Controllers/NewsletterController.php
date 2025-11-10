@@ -2,30 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\NewsletterSubscriber;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\NewsletterSubscribeRequest;
+use App\Services\NewsletterService;
+use Illuminate\Http\RedirectResponse;
 
 class NewsletterController extends Controller
 {
-    public function subscribe(Request $request)
+    public function __construct(
+        private NewsletterService $newsletterService
+    ) {}
+
+    public function subscribe(NewsletterSubscribeRequest $request): RedirectResponse
     {
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|email|unique:newsletter_subscribers,email',
-        ], [
-            'email.required' => 'L\'adresse email est requise.',
-            'email.email' => 'L\'adresse email doit être valide.',
-            'email.unique' => 'Cette adresse email est déjà abonnée à notre newsletter.',
-        ]);
+        try {
+            $this->newsletterService->subscribe($request->getEmail());
 
-        if ($validator->fails()) {
-            return back()->with('newsletter_error', $validator->errors()->first());
+            return back()->with('newsletter_success', 'Merci pour votre abonnement ! Vous recevrez bientôt nos actualités.');
+        } catch (\Exception $e) {
+            return back()
+                ->with('newsletter_error', $e->getMessage())
+                ->withInput();
         }
-
-        NewsletterSubscriber::create([
-            'email' => $request->email,
-        ]);
-
-        return back()->with('newsletter_success', 'Merci pour votre abonnement ! Vous recevrez bientôt nos actualités.');
     }
 }

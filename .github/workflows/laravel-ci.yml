@@ -7,9 +7,14 @@ on:
     branches: [ main, dev ]
 
 jobs:
-  build:
-
+  tests:
+    name: Tests (PHP ${{ matrix.php }})
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php: ['8.3']
+      fail-fast: false
 
     services:
       mysql:
@@ -32,23 +37,43 @@ jobs:
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.3'
-        extensions: mbstring, bcmath, pdo_mysql
-        coverage: none
+        php-version: ${{ matrix.php }}
+        extensions: mbstring, bcmath, pdo_mysql, gd
+        coverage: xdebug
+        tools: composer:v2
+
+    - name: Get Composer Cache Directory
+      id: composer-cache
+      run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+    - name: Cache Composer dependencies
+      uses: actions/cache@v3
+      with:
+        path: ${{ steps.composer-cache.outputs.dir }}
+        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+        restore-keys: ${{ runner.os }}-composer-
 
     - name: Copy .env
       run: cp .env.example .env
 
     - name: Install Composer dependencies
-      run: composer install --prefer-dist --no-progress
+      run: composer install --prefer-dist --no-progress --no-interaction
 
     - name: Generate application key
       run: php artisan key:generate
 
+    - name: Cache npm dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: ${{ runner.os }}-node-
+
+    - name: Install npm dependencies
+      run: npm ci
+
     - name: Build assets
-      run: |
-        npm ci
-        npm run build
+      run: npm run build
 
     - name: Run migrations
       env:
@@ -59,14 +84,57 @@ jobs:
         DB_HOST: 127.0.0.1
       run: php artisan migrate --force
 
-    - name: Lint with Pint
-      run: ./vendor/bin/pint --test
-
-    - name: Run tests
+    - name: Run tests with coverage
       env:
         DB_CONNECTION: mysql
         DB_DATABASE: genesis_test
         DB_USERNAME: root
         DB_PASSWORD: root
         DB_HOST: 127.0.0.1
-      run: ./vendor/bin/pest
+      run: ./vendor/bin/pest --coverage --min=60
+
+  code-quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3'
+        extensions: mbstring, bcmath
+        coverage: none
+        tools: composer:v2
+
+    - name: Install Composer dependencies
+      run: composer install --prefer-dist --no-progress --no-interaction
+
+    - name: Lint with Pint
+      run: ./vendor/bin/pint --test
+
+    - name: Security audit
+      run: composer audit
+
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3'
+        extensions: mbstring
+        coverage: none
+
+    - name: Install Composer dependencies
+      run: composer install --prefer-dist --no-progress --no-interaction
+
+    - name: Run security checker
+      run: composer audit --format=json || true

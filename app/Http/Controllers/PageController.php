@@ -2,17 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\ContactMail;
-use App\Models\Service;
-use Barryvdh\DomPDF\Facade\Pdf;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\ContactFormRequest;
+use App\Repositories\ServiceRepository;
+use App\Services\BrochureService;
+use App\Services\ContactService;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use Symfony\Component\HttpFoundation\Response;
 
 class PageController extends Controller
 {
+    public function __construct(
+        private ServiceRepository $serviceRepository,
+        private ContactService $contactService,
+        private BrochureService $brochureService
+    ) {}
+
     /**
      * Display the home page.
      */
@@ -65,7 +70,7 @@ class PageController extends Controller
      */
     public function services(): View
     {
-        $services = Service::published()->orderBy('order', 'asc')->get();
+        $services = $this->serviceRepository->getAllPublished();
 
         return view('pages.services', compact('services'));
     }
@@ -89,49 +94,16 @@ class PageController extends Controller
     /**
      * Store a contact form submission.
      */
-    public function storeContact(Request $request)
+    public function storeContact(ContactFormRequest $request): RedirectResponse
     {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'phone' => 'nullable|string|max:20',
-            'subject' => 'required|string|max:255',
-            'message' => 'required|string|max:5000',
-        ], [
-            'name.required' => 'Le nom est requis.',
-            'name.max' => 'Le nom ne doit pas dépasser 255 caractères.',
-            'email.required' => 'L\'adresse email est requise.',
-            'email.email' => 'L\'adresse email doit être valide.',
-            'email.max' => 'L\'adresse email ne doit pas dépasser 255 caractères.',
-            'phone.max' => 'Le numéro de téléphone ne doit pas dépasser 20 caractères.',
-            'subject.required' => 'Le sujet est requis.',
-            'subject.max' => 'Le sujet ne doit pas dépasser 255 caractères.',
-            'message.required' => 'Le message est requis.',
-            'message.max' => 'Le message ne doit pas dépasser 5000 caractères.',
-        ]);
-
-        if ($validator->fails()) {
-            return redirect()->back()
-                ->withErrors($validator)
-                ->withInput();
-        }
-
         try {
-            $contactData = [
-                'name' => $request->name,
-                'email' => $request->email,
-                'phone' => $request->phone,
-                'subject' => $request->subject,
-                'message' => $request->message,
-            ];
+            $this->contactService->sendContactEmail($request->getContactData());
 
-            // Send email
-            Mail::to(config('mail.from.address'))->send(new ContactMail($contactData));
-
-            return redirect()->back()->with('success', 'Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
+            return redirect()->back()
+                ->with('success', 'Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
         } catch (\Exception $e) {
             return redirect()->back()
-                ->with('error', 'Une erreur est survenue lors de l\'envoi de votre message. Veuillez réessayer plus tard.')
+                ->with('error', $e->getMessage())
                 ->withInput();
         }
     }
@@ -141,11 +113,6 @@ class PageController extends Controller
      */
     public function downloadBrochure(): Response
     {
-        $services = Service::published()->get();
-
-        $pdf = Pdf::loadView('pdf.brochure', compact('services'));
-        $pdf->setPaper('a4', 'portrait');
-
-        return $pdf->download('Genesis-Brochure-'.date('Y').'.pdf');
+        return $this->brochureService->generateBrochurePdf();
     }
 }
