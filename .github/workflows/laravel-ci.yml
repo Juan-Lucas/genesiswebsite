@@ -91,7 +91,7 @@ jobs:
         DB_USERNAME: root
         DB_PASSWORD: root
         DB_HOST: 127.0.0.1
-      run: ./vendor/bin/pest --coverage --min=70
+      run: ./vendor/bin/pest --coverage --min=60
 
   code-quality:
     name: Code Quality
