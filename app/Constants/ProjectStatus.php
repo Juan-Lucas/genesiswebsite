@@ -5,7 +5,9 @@ namespace App\Constants;
 class ProjectStatus
 {
     public const DRAFT = 'draft';
+
     public const PUBLISHED = 'published';
+
     public const ARCHIVED = 'archived';
 
     public const ALL = [

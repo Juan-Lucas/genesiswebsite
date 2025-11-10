@@ -10,7 +10,8 @@ class ContactService
     /**
      * Send a contact email using a queued job.
      *
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
+     *
      * @throws \Exception
      */
     public function sendContactEmail(array $data): void
@@ -38,7 +39,8 @@ class ContactService
     /**
      * Validate contact data structure.
      *
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
+     *
      * @throws \InvalidArgumentException
      */
     private function validateContactData(array $data): void
@@ -46,7 +48,7 @@ class ContactService
         $required = ['name', 'email', 'subject', 'message'];
 
         foreach ($required as $field) {
-            if (!isset($data[$field]) || empty($data[$field])) {
+            if (! isset($data[$field]) || empty($data[$field])) {
                 throw new \InvalidArgumentException("Le champ {$field} est requis.");
             }
         }

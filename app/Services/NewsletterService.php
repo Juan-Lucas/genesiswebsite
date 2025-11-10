@@ -2,8 +2,8 @@
 
 namespace App\Services;
 
-use App\Repositories\NewsletterRepository;
 use App\Models\NewsletterSubscriber;
+use App\Repositories\NewsletterRepository;
 use Illuminate\Support\Facades\Log;
 
 class NewsletterService

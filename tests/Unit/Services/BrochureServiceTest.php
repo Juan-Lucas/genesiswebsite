@@ -13,12 +13,13 @@ class BrochureServiceTest extends TestCase
     use RefreshDatabase;
 
     private ServiceRepository $repository;
+
     private BrochureService $service;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->repository = new ServiceRepository();
+        $this->repository = new ServiceRepository;
         $this->service = new BrochureService($this->repository);
     }
 

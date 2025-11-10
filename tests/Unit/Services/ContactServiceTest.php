@@ -14,7 +14,7 @@ class ContactServiceTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->service = new ContactService();
+        $this->service = new ContactService;
     }
 
     public function test_send_contact_email_sends_mail_successfully(): void
@@ -34,7 +34,7 @@ class ContactServiceTest extends TestCase
         $this->service->sendContactEmail($data);
 
         // Assert
-        Mail::assertSent(ContactMail::class, function ($mail) use ($data) {
+        Mail::assertSent(ContactMail::class, function ($mail) {
             return $mail->hasTo(config('mail.from.address'));
         });
     }

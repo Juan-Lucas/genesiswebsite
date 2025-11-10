@@ -16,7 +16,7 @@ class ServiceRepositoryTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->repository = new ServiceRepository();
+        $this->repository = new ServiceRepository;
     }
 
     public function test_get_all_published_returns_only_published_services(): void

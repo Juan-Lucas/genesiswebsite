@@ -5,10 +5,15 @@ namespace App\Constants;
 class ProjectCategory
 {
     public const E_COMMERCE = 'e-commerce';
+
     public const MOBILE = 'mobile';
+
     public const CLOUD = 'cloud';
+
     public const EDUCATION = 'education';
+
     public const SAAS = 'saas';
+
     public const ANALYTICS = 'analytics';
 
     public const ALL = [

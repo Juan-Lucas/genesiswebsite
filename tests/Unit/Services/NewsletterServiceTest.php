@@ -13,12 +13,13 @@ class NewsletterServiceTest extends TestCase
     use RefreshDatabase;
 
     private NewsletterRepository $repository;
+
     private NewsletterService $service;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->repository = new NewsletterRepository();
+        $this->repository = new NewsletterRepository;
         $this->service = new NewsletterService($this->repository);
     }
 

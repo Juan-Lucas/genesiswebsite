@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use App\Models\Service;
 use App\Repositories\ServiceRepository;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Symfony\Component\HttpFoundation\Response;

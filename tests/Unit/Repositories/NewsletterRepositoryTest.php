@@ -16,7 +16,7 @@ class NewsletterRepositoryTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->repository = new NewsletterRepository();
+        $this->repository = new NewsletterRepository;
     }
 
     public function test_is_subscribed_returns_true_when_email_exists(): void
