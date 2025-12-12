@@ -37,6 +37,7 @@ class SetLocale
         }
 
         App::setLocale($locale);
+
         return $next($request);
     }
 }
