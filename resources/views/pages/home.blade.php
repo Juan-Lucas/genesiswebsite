@@ -194,26 +194,24 @@
                 <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-genesis-blue-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
                     <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Projets réalisés</dt>
                     <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">
-                        <span class="bg-gradient-genesis bg-clip-text text-transparent" data-count="50">0</span>+
+                        <span class="bg-gradient-genesis bg-clip-text text-transparent" data-count="150">150</span>+
                     </dd>
                 </div>
                 <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-genesis-blue-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
                     <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Clients satisfaits</dt>
                     <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">
-                        <span class="bg-gradient-genesis bg-clip-text text-transparent" data-count="100">0</span>%
+                        <span class="bg-gradient-genesis bg-clip-text text-transparent" data-count="98">98</span>%
                     </dd>
                 </div>
                 <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-genesis-blue-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
-                    <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Années d'expérience</dt>
+                    <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Ans d'expérience</dt>
                     <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">
-                        <span class="bg-gradient-genesis bg-clip-text text-transparent" data-count="5">0</span>+
+                        <span class="bg-gradient-genesis bg-clip-text text-transparent" data-count="5">5</span>+
                     </dd>
                 </div>
                 <div class="flex flex-col bg-white/5 backdrop-blur-sm p-8 rounded-2xl ring-1 ring-white/10 hover:bg-white/10 hover:ring-genesis-blue-500/50 transition-all duration-300 group stat-card animate-on-scroll hover:scale-105">
-                    <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Technologies maîtrisées</dt>
-                    <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">
-                        <span class="bg-gradient-genesis bg-clip-text text-transparent" data-count="20">0</span>+
-                    </dd>
+                    <dt class="text-sm font-semibold leading-6 text-gray-300 group-hover:text-gray-200">Support disponible</dt>
+                    <dd class="order-first text-4xl font-bold tracking-tight text-white mb-2">24/7</dd>
                 </div>
             </dl>
         </div>

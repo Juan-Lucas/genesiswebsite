@@ -126,20 +126,20 @@
 
                         <div class="relative grid grid-cols-2 gap-8">
                             <div class="text-center p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 stat-card">
-                                <div class="text-5xl font-bold mb-2"><span data-count="150">0</span>+</div>
+                                <div class="text-5xl font-bold mb-2"><span data-count="150">150</span>+</div>
                                 <div class="text-sm uppercase tracking-wider text-white/90">Projets réalisés</div>
                             </div>
                             <div class="text-center p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 stat-card">
-                                <div class="text-5xl font-bold mb-2"><span data-count="98">0</span>%</div>
+                                <div class="text-5xl font-bold mb-2"><span data-count="98">98</span>%</div>
                                 <div class="text-sm uppercase tracking-wider text-white/90">Clients satisfaits</div>
                             </div>
                             <div class="text-center p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 stat-card">
-                                <div class="text-5xl font-bold mb-2"><span data-count="25">0</span>+</div>
-                                <div class="text-sm uppercase tracking-wider text-white/90">Experts passionnés</div>
+                                <div class="text-5xl font-bold mb-2"><span data-count="5">5</span>+</div>
+                                <div class="text-sm uppercase tracking-wider text-white/90">Ans d'expérience</div>
                             </div>
                             <div class="text-center p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 stat-card">
-                                <div class="text-5xl font-bold mb-2"><span data-count="10">0</span>+</div>
-                                <div class="text-sm uppercase tracking-wider text-white/90">Années d'expérience</div>
+                                <div class="text-5xl font-bold mb-2">24/7</div>
+                                <div class="text-sm uppercase tracking-wider text-white/90">Support disponible</div>
                             </div>
                         </div>
                     </div>

@@ -127,23 +127,25 @@
         <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div class="text-center group stat-card animate-on-scroll hover:scale-105 transition-transform duration-300">
                 <div class="text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">
-                    <span data-count="150">0</span>+
+                    <span data-count="150">150</span>+
                 </div>
-                <div class="text-base font-medium text-gray-600 dark:text-gray-400 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">Projets livrés</div>
+                <div class="text-base font-medium text-gray-600 dark:text-gray-400 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">Projets réalisés</div>
             </div>
             <div class="text-center group stat-card animate-on-scroll hover:scale-105 transition-transform duration-300">
                 <div class="text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">
-                    <span data-count="98">0</span>%
+                    <span data-count="98">98</span>%
                 </div>
-                <div class="text-base font-medium text-gray-600 dark:text-gray-400 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">Satisfaction client</div>
+                <div class="text-base font-medium text-gray-600 dark:text-gray-400 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">Clients satisfaits</div>
             </div>
             <div class="text-center group stat-card animate-on-scroll hover:scale-105 transition-transform duration-300">
-                <div class="text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">2M+</div>
-                <div class="text-base font-medium text-gray-600 dark:text-gray-400 group-hover:text-genesis-purple-600 dark:group-hover:text-genesis-purple-400 transition-colors">Utilisateurs actifs</div>
+                <div class="text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">
+                    <span data-count="5">5</span>+
+                </div>
+                <div class="text-base font-medium text-gray-600 dark:text-gray-400 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">Ans d'expérience</div>
             </div>
             <div class="text-center group stat-card animate-on-scroll hover:scale-105 transition-transform duration-300">
                 <div class="text-5xl font-bold bg-gradient-genesis bg-clip-text text-transparent mb-2">24/7</div>
-                <div class="text-base font-medium text-gray-600 dark:text-gray-400 group-hover:text-genesis-purple-600 dark:group-hover:text-genesis-purple-400 transition-colors">Support technique</div>
+                <div class="text-base font-medium text-gray-600 dark:text-gray-400 group-hover:text-genesis-blue-600 dark:group-hover:text-genesis-blue-400 transition-colors">Support disponible</div>
             </div>
         </div>
     </div>
