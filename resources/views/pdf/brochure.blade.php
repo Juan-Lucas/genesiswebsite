@@ -258,7 +258,7 @@
                 <div class="label">Experts passionnés</div>
             </div>
             <div class="stat" style="margin-left: 10px;">
-                <div class="number">10+</div>
+                <div class="number">5+</div>
                 <div class="label">Années d'expérience</div>
             </div>
         </div>
