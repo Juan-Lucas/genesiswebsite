@@ -292,7 +292,7 @@
 </div>
 
 <!-- Testimonial Section -->
-<div class="bg-gray-900 py-16 sm:py-20 relative">
+{{-- <div class="bg-gray-900 py-16 sm:py-20 relative">
     <div class="absolute inset-x-0 top-0 h-1 bg-gradient-genesis opacity-50"></div>
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-xl text-center">
@@ -405,7 +405,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <!-- CTA Section -->
 <div class="bg-white dark:bg-gray-900 relative">

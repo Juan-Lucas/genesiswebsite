@@ -55,8 +55,8 @@ class ServiceSeeder extends Seeder
             ],
             [
                 'order' => 3,
-                'title' => 'Photography',
-                'slug' => 'photography',
+                'title' => 'Photographie',
+                'slug' => 'photographie',
                 'description' => 'Photographies professionnelles pour sublimer votre image et créer des visuels authentiques.',
                 'content' => "Capturez l'essence de votre marque avec des photographies professionnelles qui racontent votre histoire. Nos photographes experts créent des images authentiques qui valorisent votre identité.\n\nNous couvrons tous les besoins en photographie professionnelle : corporate, événementiel, produits, architecture, portraits, reportages et contenus pour réseaux sociaux.\n\nNotre approche combine technique photographique maîtrisée et sensibilité artistique pour créer des images qui transmettent les bonnes émotions et véhiculent vos messages.\n\nNous utilisons du matériel professionnel haut de gamme et maîtrisons toutes les techniques d'éclairage (studio, lumière naturelle, flash) pour un rendu optimal en toute circonstance.\n\nChaque shooting est soigneusement préparé : repérage des lieux, définition de la direction artistique, sélection des prises de vues et retouches professionnelles pour un résultat impeccable.\n\nNous livrons vos photos dans les formats et résolutions adaptés à vos usages (web, print, réseaux sociaux) avec des retouches professionnelles qui subliment chaque image.",
                 'features' => [

@@ -101,7 +101,7 @@ class ProjectSeeder extends Seeder
                 'color' => 'amber',
             ],
 
-            // PHOTOGRAPHY
+            // PHOTOGRAPHIE
             [
                 'title' => 'Photographie Corporate - Total Energies',
                 'slug' => 'photographie-corporate-total-energies',

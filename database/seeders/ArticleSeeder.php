@@ -61,7 +61,7 @@ class ArticleSeeder extends Seeder
                 'published_at' => now()->subDays(20),
             ],
 
-            // PHOTOGRAPHY
+            // PHOTOGRAPHIE
             [
                 'title' => 'Photographie Corporate : Valoriser votre Capital Humain',
                 'slug' => 'photographie-corporate-valoriser-capital-humain',
