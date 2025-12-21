@@ -23,7 +23,7 @@
                 } else if (userMsg.includes('contact') || userMsg.includes('joindre')) {
                     botResponse = 'Vous pouvez nous contacter par email à contact@genesis.com ou par téléphone au +33 1 23 45 67 89. 📞';
                 } else if (userMsg.includes('service') || userMsg.includes('proposez')) {
-                    botResponse = 'Nous proposons : Vidéographie 🎬, Graphic Design 🎨, Photography 📷, Architecture 🏛️, Conception de Logiciels 💻 et Intégration de Progiciels 🖥️. Consultez notre page Services ! 🚀';
+                    botResponse = 'Nous proposons : Vidéographie 🎬, Graphic Design 🎨, Photographie 📷, Architecture 🏛️, Conception de Logiciels 💻 et Intégration de Progiciels 🖥️. Consultez notre page Services ! 🚀';
                 } else if (userMsg.includes('horaire') || userMsg.includes('ouvert')) {
                     botResponse = 'Nous sommes disponibles du lundi au vendredi de 9h à 18h. Pour toute urgence, contactez-nous par email ! ⏰';
                 } else if (userMsg.includes('bonjour') || userMsg.includes('salut') || userMsg.includes('hello')) {
